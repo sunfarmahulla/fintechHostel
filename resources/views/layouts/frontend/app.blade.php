@@ -71,20 +71,11 @@
                     </li>
                     <li><a href="room_list.html">Rooms</a></li>
                     <li class="submenu">
-                    <a href="javascript:void(0);" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
+                    <a href="javascript:void(0);" class="show-submenu">Auth<i class="icon-down-open-mini"></i></a>
                     <ul>
-                    	<li><a href="header_2/index.html">Header transparent</a></li>
-                    	<li><a href="room_detail.html">Room detail</a></li>
-                        <li><a href="room_detail_2.html">Room detail date 2</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="faq.html">Faq</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="coming_soon/index.html">Site launch/Coming soon</a></li>
-                        <li><a href="shortcodes.html">Shortcodes</a></li>
-                        <li><a href="icon_pack_1.html">Icon pack 1</a></li>
-                         <li><a href="icon_pack_2.html">Icon pack 2</a></li>
-                        <li><a href="icon_pack_3.html">Icon pack 3</a></li>
+                    	<li><a href="{{url('/login')}}">Login</a></li>
+                    	<li><a href="{{url('/register')}}">Register</a></li>
+                       
                     </ul>
                     </li>
                     <li><a href="contacts.html">Contacts</a></li>
