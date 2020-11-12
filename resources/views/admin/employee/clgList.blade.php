@@ -5,160 +5,107 @@
 @include('admin._partials.clgListAndButton')
 
 <div class="nk-block nk-block-lg">
-        <div class="nk-block-head">
-            <div class="nk-block-head-content">
-                <h4 class="nk-block-title">List Of Colleges</h4>
-                <div class="nk-block-des">
-                    <p>Action...</p>
-                </div>
+    <div class="nk-block-head">
+        <div class="nk-block-head-content">
+            <h4 class="nk-block-title">List Of Colleges</h4>
+            <div class="nk-block-des">
+                <p>Action...</p>
             </div>
         </div>
-        <div class="card card-preview">
-            <div class="card-inner">
-               <table class="datatable-init nk-tb-list nk-tb-ulist" data-auto-responsive="false">
-                    <thead>
-                        <tr class="nk-tb-item nk-tb-head">
-                            <th class="nk-tb-col nk-tb-col-check">
-                                <div class="custom-control custom-control-sm custom-checkbox notext">
-                                    <input type="checkbox" class="custom-control-input" id="uid">
-                                    <label class="custom-control-label" for="uid"></label>
-                                </div>
-                            </th>
-                            <th class="nk-tb-col"><span class="sub-text">College Logo</span></th>
-                            <th class="nk-tb-col"><span class="sub-text">Name Of College</span></th>
-                            
-                            <th class="nk-tb-col tb-col-md"><span class="sub-text">State</span></th>
-                            <th class="nk-tb-col tb-col-lg"><span class="sub-text">Pincode</span></th>
-                            
-                            <th class="nk-tb-col nk-tb-col-tools text-right">
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($data as $row)
-                        <tr class="nk-tb-item">
-                            <td class="nk-tb-col nk-tb-col-check">
-                                <div class="custom-control custom-control-sm custom-checkbox notext">
-                                    <input type="checkbox" class="custom-control-input" id="uid1">
-                                    <label class="custom-control-label" for="uid1"></label>
-                                </div>
-                            </td>
-                            
-                            <td class="nk-tb-col tb-col-md">
-                                <img src="{{asset('images/'.$row->college_logo_url)}}" width="250px" height="250px">
-                            </td>
+    </div>
+ 
+<div class="card card-preview">
+    <div class="card-inner">
+        <table class="datatable-init table">
+            <thead>
+                <tr>
+                    <th>Serial No.</th>
+                    <th>College Logo</th>
+                    <th>College Name</th>
+                    <th>State Name</th>
+                    <th>Postel Id</th>
+                    <th>Action</th>
 
-                            <td class="nk-tb-col tb-col-lg">
-                                <span>{{$row->college_name}}</span>
-                            </td>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($data as $row)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td><img src="{{asset('images/'.$row->college_logo_url)}}" width="100px" height="100px"></td>
+                    <td>{{$row->college_name}}</td>
+                    <td>{{$row->state}}</td>
+                    <td>{{$row->postel_id}}</td>
+                    <td>
+                        <button class="btn btn-trigger btn-icon" data-toggle="modal" data-target="#modaldelete{{$row->id}}" data data-placement="top" title="Deactivate User"><em class="icon ni ni-trash-fill"></em></button>
 
-                             <td class="nk-tb-col tb-col-lg">
-                                <span>{{$row->state}}</span>
-                            </td>
-
-                            <td class="nk-tb-col tb-col-lg">
-                                <span>{{$row->postel_id}}</span>
-                            </td>
-
-                            
-                            <td class="nk-tb-col nk-tb-col-tools">
-                                <ul class="nk-tb-actions gx-1">
-                                    <li class="nk-tb-action-hidden">
-                                        <button class="btn btn-trigger btn-icon" data-toggle="modal" data-target="#modalDefault2{{$row->id}}" data data-placement="top" title="Deactivate User">
-                                            <em class="icon ni ni-user-cross-fill"></em>
-                                        </button>
-                                    </li>
-                                         <!---Model--------->
-
-                                    <!-- Modal Content Code -->
-                                    <div class="modal fade" tabindex="-1" id="modalDefault2{{$row->id}}">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <em class="icon ni ni-cross"></em>
-                                                </a>
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">User Activate Action</h5>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form action="h/activate/{{$row->id}}" method="POST">
-                                                        @csrf
-                                               
-                                                        <div class="form-group">
-                                                            <label class="form-label">Deactivate/Activate User</label>
-                                                            <div class="form-control-wrap">
-                                                                <select name="activate" class="form-select">
-                                                                    <option value="1">Activate</option>
-                                                                    <option value="0">Deactivate</option>
-                                                                    
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer bg-light">
-                                                    <span class="sub-text"></span>
-                                                </div>
-                                            </div>
-                                        </div>
+                         <div class="modal fade" tabindex="-1" id="modaldelete{{$row->id}}">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                        <em class="icon ni ni-cross"></em>
+                                    </a>
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Delete College Name</h5>
                                     </div>
-                                    <!--end model------->
-                                    <li class="nk-tb-action-hidden">
-                                        <button  class="btn btn-trigger btn-icon" data-toggle="modal" data-target="#modalQuickView{{$row->id}}" data-placement="top" title="change role"><em class="icon ni ni-eye"></em>
-                                        </button>
-                                    </li>
-
-
-                                    <div class="modal fade" tabindex="-1" id="modalQuickView{{$row->id}}">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <em class="icon ni ni-cross"></em>
-                                                </a>
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">College Details</h5>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <center><img src="{{asset('images/'.$row->college_logo_url)}}" width="50px" height="50px"></center><br><br>
-                                                </hr>
-                                                <ul>
-                                                    <li>College Name: {{$row->college_name}}</li>
-                                                    <li>State Name: {{$row->state}}</li>
-                                                    <li>PinCode: {{$row->postel_id}}</li>
-                                                    <li>Address1: {{$row->address_1}}</li>
-                                                    <li>Address2: {{$row->address_2}}</li>
-                                                    <li>College Type: {{$row->college_type}}</li>
-                                                    <li>College Web Url: {{$row->college_web_url}}</li>
-                                                    <li>No. Of Hostel Near at: _________________</li>
-
-                                                </ul>
-                                                </div>
-                                                <div class="modal-footer bg-light">
-                                                    <span class="sub-text"></span>
-                                                </div>
+                                    <div class="modal-body">
+                                        <form action="ad/clg-registration/{{$row->id}}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                            
+                                            <h4>Are you sure! you want to delete...</h4>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-lg btn-danger">Delete</button>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
+                                    <div class="modal-footer bg-light">
+                                        <span class="sub-text"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        &nbsp;&nbsp;
+                        <button  class="btn btn-trigger btn-icon" data-toggle="modal" data-target="#modalQuickView{{$row->id}}" data-placement="top" title="view"><em class="icon ni ni-eye"></em></button>
+                        &nbsp;&nbsp;
+                        <a  class="btn btn-trigger btn-icon" href="ad/clg-registration/{{$row->id}}" title="edit"><em class="icon ni ni-edit-alt-fill"></em></a>
 
+                        <div class="modal fade" tabindex="-1" id="modalQuickView{{$row->id}}">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                        <em class="icon ni ni-cross"></em>
+                                    </a>
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">College Details</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <center><img src="{{asset('images/'.$row->college_logo_url)}}" width="50px" height="50px"></center><br><br>
+                                        </hr>
+                                        <ul>
+                                            <li>College Name: {{$row->college_name}}</li>
+                                            <li>State Name: {{$row->state}}</li>
+                                            <li>PinCode: {{$row->postel_id}}</li>
+                                            <li>Address1: {{$row->college_address_1}}</li>
+                                            <li>Address2: {{$row->college_address_2}}</li>
+                                            <li>College Type: {{$row->college_type}}</li>
+                                            <li>College Web Url: {{$row->college_web_url}}</li>
+                                            <li>No. Of Hostel Near at: _________________</li>
 
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
 
-                                    <li class="nk-tb-action-hidden">
-                                        <a  class="btn btn-trigger btn-icon" href="ad/clg-registration/{{$row->id}}" title="change role">
-                                            <em class="icon ni ni-edit-alt-fill"></em>
-                                        </a>
-                                    </li>
-                                    
-                                    
-                                </ul>
-                            </td>
-                        </tr><!-- .nk-tb-item  -->
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div><!-- .card-preview -->
-    </div> <!-- nk-block -->
-</div><!---->
 
 @endsection

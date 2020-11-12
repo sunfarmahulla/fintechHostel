@@ -131,7 +131,8 @@ class HostelRegistrationController extends Controller
      */
     public function edit($id)
     {
-        //
+        $hostelData = HostelRegistration::where('id', $id)->first();
+        return view('admin.hostel.hostelRegistration.editRegistration', ['hostelData' => $hostelData]);
     }
 
     /**
@@ -154,6 +155,13 @@ class HostelRegistrationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = HostelRegistration::where('id', $id)->delete();
+
+        if($data == true) {
+            return Redirect::back()->with('success', 'Successfully deleted element');
+        }else{
+            return Redirect::back()->with('danger', 'Failed...');
+
+        }
     }
 }

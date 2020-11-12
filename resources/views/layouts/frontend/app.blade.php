@@ -12,7 +12,7 @@
     <title>Hostel Connect</title>
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('logo/logo.jpeg')}}" type="{{asset('logo/logo.jpeg')}}">
     <link rel="apple-touch-icon" type="image/x-icon" href=" {{asset('frontend/img/apple-touch-icon-57x57-precomposed.png')}}">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href=" {{asset('frontend/img/apple-touch-icon-72x72-precomposed.png')}}">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href=" {{asset('frontend/img/apple-touch-icon-114x114-precomposed.png')}}">
@@ -41,8 +41,8 @@
     <div class="container">
         <div class="row">
             <div class="col--md-3 col-sm-3 col-xs-3">
-                <a href="index.html" id="logo"> hc
-                <!-- <img src="img/logo.png" width="190" height="23" alt="" data-retina="true"> -->
+                <a href="index.html" id="logo">
+                <img src="{{asset('logo/logo.jpeg')}}" width="190" height="23" alt="" data-retina="true">
                 </a>
             </div>
             <nav class="col--md-9 col-sm-9 col-xs-9">

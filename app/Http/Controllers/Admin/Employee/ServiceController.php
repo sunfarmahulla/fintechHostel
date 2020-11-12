@@ -84,7 +84,7 @@ class ServiceController extends Controller
 
         if($data == true) {
             
-            return Redirect::back()->with('success', 'Successfully role update');
+            return Redirect::back()->with('success', 'Successfully data updated');
         
         }else {
             return Redirect::back()->with('danger', 'Something is problem with data. Not updated');
@@ -100,6 +100,15 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        //
+         $data = ServiceState::where('id', $id)->delete(); 
+
+        if($data == true) {
+            
+            return Redirect::back()->with('success', 'Successfully deleted state name');
+        
+        }else {
+            return Redirect::back()->with('danger', 'Something is problem with data');
+
+        }
     }
 }

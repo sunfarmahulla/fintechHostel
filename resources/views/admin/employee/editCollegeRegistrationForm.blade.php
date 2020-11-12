@@ -16,7 +16,7 @@
             <div class="card-head">
                 <h5 class="card-title">Registration Form</h5>
             </div>
-            <form action="ad/clg-registration/{{$collegeData->id}}/edit" class="gy-3" enctype="multipart/form-data" method="POST">
+            <form action="clg-registration/{{$collegeData->id}}" class="gy-3" enctype="multipart/form-data" method="POST">
             @csrf
             @method('put')
                 <div class="row g-3 align-center">
@@ -31,6 +31,7 @@
                         <label class="form-label">Select State</label>
                         <div class="form-control-wrap">
                             <select class="form-select form-control form-control-lg" name="state_name" data-search="on" required>
+                                <option value="{{$collegeData->state}}">{{$collegeData->state}}</option>
                                 @php 
                                     $data = \App\Models\ServiceState::all();
 
@@ -70,7 +71,7 @@
                     <div class="col-lg-7">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <textarea class="form-control" name="clg_address_1" value=""  placeholder="college Address 1" required>{{!empty($collegeData->address_1)? $collegeData->address_1: old('clg_address_1')}}</textarea>
+                                <textarea class="form-control" name="clg_address_1" value=""  placeholder="college Address 1" required>{{!empty($collegeData->college_address_1)? $collegeData->college_address_1: old('clg_address_1')}}</textarea>
                             </div>
                         </div>
                     </div>
@@ -85,7 +86,7 @@
                     <div class="col-lg-7">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <textarea class="form-control" name="clg_address_2" value=""  placeholder="college Address 2" required>{{!empty($collegeData->address_2)? $collegeData->address_2 : old('clg_address_2')}}</textarea>
+                                <textarea class="form-control" name="clg_address_2" value=""  placeholder="college Address 2" required>{{!empty($collegeData->college_address_2)? $collegeData->college_address_2 : old('clg_address_2')}}</textarea>
                             </div>
                         </div>
                     </div>

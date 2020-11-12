@@ -167,7 +167,14 @@ class CollegeRegistrationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = ClgRegistration::where('id', $id)->delete();
+
+        if($data == true) {
+            return Redirect::back()->with('success', 'Successfully deleted element');
+        }else{
+            return Redirect::back()->with('danger', 'Failed...');
+
+        }
     }
 
    
