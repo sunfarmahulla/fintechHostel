@@ -29,17 +29,16 @@
                     <li class="nk-menu-heading">
                         <h6 class="overline-title text-primary-alt">Hostel Management</h6>
                     </li><!-- .nk-menu-heading -->
+                  
+
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                            <span class="nk-menu-text">Set up profile</span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-tranx"></em></span>
+                            <span class="nk-menu-text">Hostel Provider</span>
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="{{url('/ad/user')}}" class="nk-menu-link"><span class="nk-menu-text">Build Profile</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="{{url('/ad/user/create')}}" class="nk-menu-link"><span class="nk-menu-text">Action Page</span></a>
+                                <a href="{{url('htl/hp')}}" class="nk-menu-link"><span class="nk-menu-text">Complete Registration/Profile</span></a>
                             </li>
                             
                         </ul><!-- .nk-menu-sub -->

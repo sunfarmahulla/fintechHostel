@@ -1,4 +1,4 @@
-@extends('layouts.admin.app')
+@extends('layouts.hostel.app')
 
 @section('content')
 
@@ -27,7 +27,7 @@
                                 <div class="nk-block">
                                     <div class="nk-data data-list">
                                         <div class="data-head">
-                                            <h6 class="overline-title">Profile</h6>
+                                            <h4 class="overline-title">Profile&nbsp; &nbsp;<a style="color:red" href="ad/clg-registration" title="edit"><em class="icon ni ni-edit-alt-fill"></em></a></h4>
                                         </div>
                                         
                                         

@@ -32,6 +32,10 @@ Route::group(['prefix' => 'employee', 'middleware' => 'employee'], function(){
 
 Route::group(['prefix' => 'htl', 'middleware' => 'hostelProvider', 'middleware' => 'auth'], function(){
 	Route::view('/', 'hostelProvider.home');
+
+	//hostel_provider_user area
+
+	Route::view('hp', 'hostelProvider.hostelRegistration.registration');
 });
 
 Route::group(['prefix' => 'ad', 'middleware' => 'admin', 'middleware' => 'auth'], function(){
@@ -77,9 +81,5 @@ Route::group(['prefix' => 'ad', 'middleware' => 'admin', 'middleware' => 'auth']
 	//End of hostel requirement registration 
 
 	
-
-	//hostel_provider_user area
-
-	Route::view('hp', 'hostelProvider.hostelRegistration.registration');
 
 });

@@ -1,4 +1,4 @@
-@extends('layouts.admin.app')
+@extends('layouts.hostel.app')
 
 @section('content')
 
@@ -27,7 +27,7 @@
                                 <div class="nk-block">
                                     <div class="nk-data data-list">
                                         <div class="data-head">
-                                            <h6 class="overline-title">Basics</h6>
+                                            <h6 class="overline-title">Basics </h6>
                                         </div>
                                         
                                         
