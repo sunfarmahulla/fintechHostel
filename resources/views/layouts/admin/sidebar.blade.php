@@ -2,8 +2,8 @@
     <div class="nk-sidebar-element nk-sidebar-head">
         <div class="nk-sidebar-brand">
             <a href="html/index.html" class="logo-link nk-sidebar-logo">
-                <img class="logo-light logo-img" src="{{asset('logo/logo.jpeg')}}" srcset="{{asset('logo/logo.jpeg')}} 2x" alt="logo">
-                <img class="logo-dark logo-img" src="{{asset('logo/logo.jpeg')}}" srcset="{{asset('logo/logo.jpeg')}} 2x" alt="logo-dark">
+                <img class="logo-light logo-img" src="{{asset('logo/logo.png')}}" srcset="{{asset('logo/logo.png')}} 2x" alt="logo">
+                <img class="logo-dark logo-img" src="{{asset('logo/logo.png')}}" srcset="{{asset('logo/logo.png')}} 2x" alt="logo-dark">
             </a>
         </div>
         <div class="nk-menu-trigger mr-n2">
