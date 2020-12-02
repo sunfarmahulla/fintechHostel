@@ -2,10 +2,10 @@
 
 @section('content')
 
-@php
+@php 
 
-$data = App\Models\HostelRegistration::where('id',$id)->first(); 
-$user = App\Models\User::where('id',$data->user_id)->first();
+ $data = \App\Models\HostelRegistration::where('user_id', Auth::user()->id)->first();
+
 @endphp
 <!-- content @s -->
 <div class="nk-content ">
@@ -54,9 +54,11 @@ $user = App\Models\User::where('id',$data->user_id)->first();
                                                     <div class="modal-body">
                                                         <div class="col-sm-12">
                                                             @if(empty($price))
-                                                                <form class="form" action="{{url('ad/htl/complete-registartion-price/'.$data->id)}}" method="post"  enctype="multipart/form-data">
+                                                                <form class="form" action="{{url('htl/hp/complete-registartion-price/'.$data->id)}}" method="post"  enctype="multipart/form-data">
                                                             @else
-                                                                <form class="form" action="{{url('ad/htl/complete-registartion-price-edit/'.$data->id)}}" method="post"  enctype="multipart/form-data">
+                                                                <form class="form" action="{{url('htl/hp/complete-registartion-price-edit/'.$data->id)}}" method="post"  enctype="multipart/form-data">
+
+                                                                @method('put')  
 
                                                             @endif
 
@@ -133,7 +135,9 @@ $user = App\Models\User::where('id',$data->user_id)->first();
                                        </div>
                                 </div><!-- .nk-block -->
                             </div>
-                          @include('admin._partials.hostelRegistrationOptions')
+                         
+                          @include('hostelProvider._partial.hostelRegistrationOptions')
+
                         </div><!-- .card-aside-wrap -->
                     </div><!-- .card -->
                 </div><!-- .nk-block -->

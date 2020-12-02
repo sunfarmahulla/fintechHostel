@@ -119,6 +119,21 @@ class HostelRequirementController extends Controller
     }
     
     public function priceEdit(Request $request, $id) {
+
+        $data = HostelPriceManager::find($id);
+        $data->hostel_connect_id = $id;
+        $data->actual_price = $request->get('actual_price');
+        $data->discount_price = $request->get('discount_price');
+        $data->electricity_bill = $request->get('electricity_bill');
+        $data->water_bill = $request->get('water_bill');
+        $data->fooding = $request->get('fooding');
+
+        if($data->save() == true) {
+            return Redirect::back()->with('success', 'successfully Updated');
+        }else{
+             return Redirect::back()->with('danger', 'Failed process');
+        }
+
     	
     }
 }

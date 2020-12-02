@@ -2,12 +2,10 @@
 
 @section('content')
 
-@php
+@php 
+$data = App\Models\HostelRegistration::where('user_id', Auth::user()->id)->first();
 
-$data = App\Models\HostelRegistration::where('id',$id)->first(); 
-$user = App\Models\User::where('id',$data->user_id)->first();
 @endphp
-<!-- content @s -->
 <div class="nk-content ">
     <div class="container-fluid">
         <div class="nk-content-inner">
@@ -53,7 +51,7 @@ $user = App\Models\User::where('id',$data->user_id)->first();
                                                     </div>
                                                     <div class="modal-body">
                                                         <div class="col-sm-12">
-                                                            <form class="form" action="{{url('ad/htl/complete-registartion-image/'.$data->id)}}" method="post"  enctype="multipart/form-data">
+                                                            <form class="form" action="{{url('htl/hp/complete-registartion-image/'.$data->id)}}" method="post"  enctype="multipart/form-data">
                                                                 @csrf
                                                                 <div class="form-group">
                                                                     <label class="form-label" for="default-06">Image Upload</label>
@@ -85,13 +83,15 @@ $user = App\Models\User::where('id',$data->user_id)->first();
                                             <div class="data-col">
                                               <img  src="{{asset('images/'.$row->image_url)}}" width="350px" height="250px" alt="">
                                             </div>
-                                            <div class="data-col data-col-end"><span class="data-more disable"><a href="{{url('ad/htl/complete-registartion-image-trash/'.$row->id)}}" title="delete image"><em class="icon ni ni-cross-round-fill"></em></a></span></div>
+                                            <div class="data-col data-col-end"><span class="data-more disable"><a href="{{url('htl/hp/complete-registartion-image-trash/'.$row->id)}}" title="delete image"><em class="icon ni ni-cross-round-fill"></em></a></span></div>
                                         </div><!-- data-item -->
                                         @endforeach
                                        </div>
                                 </div><!-- .nk-block -->
                             </div>
-                          @include('admin._partials.hostelRegistrationOptions')
+                        
+                          @include('hostelProvider._partial.hostelRegistrationOptions')
+
                         </div><!-- .card-aside-wrap -->
                     </div><!-- .card -->
                 </div><!-- .nk-block -->

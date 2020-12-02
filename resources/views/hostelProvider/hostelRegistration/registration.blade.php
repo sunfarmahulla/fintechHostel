@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <div class="nk-content ">
     <div class="container-fluid">
         <div class="nk-content-inner">
@@ -27,12 +26,101 @@
                                 <div class="nk-block">
                                     <div class="nk-data data-list">
                                         <div class="data-head">
-                                            <h4 class="overline-title">Profile&nbsp; &nbsp;<a style="color:red" href="ad/clg-registration" title="edit"><em class="icon ni ni-edit-alt-fill"></em></a></h4>
+                                            <h6 class="overline-title">Basics</h6>
                                         </div>
-                                        
-                                        
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit">
+                                            <div class="data-col">
+                                                <span class="data-label">Hostel Full Name</span>
+                                                <span class="data-value">{{$data->hostel_name}}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- data-item -->
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit">
+                                            <div class="data-col">
+                                                <span class="data-label">Owner Name</span>
+                                                <span class="data-value">{{ucfirst(auth::user()->name)}}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- data-item -->
+                                        <div class="data-item">
+                                            <div class="data-col">
+                                                <span class="data-label">Email</span>
+                                                <span class="data-value">{{auth::user()->email}}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more disable"><em class="icon ni ni-lock-alt"></em></span></div>
+                                        </div><!-- data-item -->
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit">
+                                            <div class="data-col">
+                                                <span class="data-label">Phone Number</span>
+                                                <span class="data-value text-soft">{{auth::user()->mobile}}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- data-item -->
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit">
+                                            <div class="data-col">
+                                                <span class="data-label">Hostel Type</span>
+                                                <span class="data-value text-soft">{{auth::user()->hostel_type}}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- data-item -->
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit">
+                                            <div class="data-col">
+                                                <span class="data-label">State</span>
+                                                <span class="data-value">{{$data->state}}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- data-item -->
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit" data-tab-target="#address">
+                                            <div class="data-col">
+                                                <span class="data-label">Address_1</span>
+                                                <span class="data-value">{{$data->address_1}}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div>
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit" data-tab-target="#address">
+                                            <div class="data-col">
+                                                <span class="data-label">Address_2</span>
+                                                <span class="data-value">{{$data->address_2}}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div>
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit" data-tab-target="#address">
+                                            <div class="data-col">
+                                                <span class="data-label">City</span>
+                                                <span class="data-value">{{$data->city}}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div>
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit" data-tab-target="#address">
+                                            <div class="data-col">
+                                                <span class="data-label">Pin Code</span>
+                                                <span class="data-value">{{$data->pin_code}}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div>
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit" data-tab-target="#address">
+                                            <div class="data-col">
+                                                <span class="data-label">Description</span>
+                                                <span class="data-value">{!!$data->description!!}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- data-item -->
+                                        <div class="data-item" data-toggle="modal" data-target="#profile-edit" data-tab-target="#address">
+                                            <div class="data-col">
+                                                <span class="data-label">Policies</span>
+                                                <span class="data-value">{!!$data->policies!!}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- data-item -->
+                                         <div class="data-item" data-toggle="modal" data-target="#profile-edit" data-tab-target="#address">
+                                            <div class="data-col">
+                                                <span class="data-label">Near_by_places</span>
+                                                <span class="data-value">{!!$data->near_by_places!!}</span>
+                                            </div>
+                                            <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
+                                        </div><!-- data-item -->
                                     </div><!-- data-list -->
-                              
+                                   
                                 </div><!-- .nk-block -->
                             </div>
                           @include('hostelProvider._partial.hostelRegistrationOptions')

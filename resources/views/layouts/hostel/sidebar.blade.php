@@ -38,7 +38,7 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="{{url('htl/hp')}}" class="nk-menu-link"><span class="nk-menu-text">Complete Registration/Profile</span></a>
+                                <a href="{{url('htl/hp/show-basic-data')}}" class="nk-menu-link"><span class="nk-menu-text">Complete Registration/Profile</span></a>
                             </li>
                             
                         </ul><!-- .nk-menu-sub -->

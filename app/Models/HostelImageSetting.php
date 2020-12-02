@@ -12,4 +12,9 @@ class HostelImageSetting extends Model
     protected $table ='hostel_connect_images';
 
     protected $fillable = ['hostel_connect_id','image_url'];
+
+    public function hostelConnect()
+    {
+        return $this->hasMany('App\Models\HostelRegistration');
+    }
 }

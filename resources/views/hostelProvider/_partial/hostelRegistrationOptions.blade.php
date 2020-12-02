@@ -13,10 +13,10 @@
     
     <div class="card-inner p-0">
         <ul class="link-list-menu">
-            <li><a class="active" href="#"><em class="icon ni ni-user-fill-c"></em><span>Hostel Registration</span></a></li>
-            <li><a href="#"><em class="icon ni ni-bell-fill"></em><span>Image Manager</span></a></li>
-            <li><a href="#"><em class="icon ni ni-activity-round-fill"></em><span>Facility Manager</span></a></li>
-            <li><a href="#"><em class="icon ni ni-lock-alt-fill"></em><span>Price settings</span></a></li>
+            <li><a class="active" href="{{url('htl/hp/show-basic-data')}}"><em class="icon ni ni-user-fill-c"></em><span>Hostel Registration</span></a></li>
+            <li><a href="{{url('htl/hp/show-image/'.$data->id)}}"><em class="icon ni ni-bell-fill"></em><span>Image Manager</span></a></li>
+            <li><a href="{{url('htl/hp/complete-registartion-facility/'.$data->id)}}"><em class="icon ni ni-activity-round-fill"></em><span>Facility Manager</span></a></li>
+            <li><a href="{{url('htl/hp/complete-registartion-price/'.$data->id)}}"><em class="icon ni ni-lock-alt-fill"></em><span>Price settings</span></a></li>
            
         </ul>
     </div><!-- .card-inner -->

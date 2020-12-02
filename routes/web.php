@@ -34,8 +34,25 @@ Route::group(['prefix' => 'htl', 'middleware' => 'hostelProvider', 'middleware' 
 	Route::view('/', 'hostelProvider.home');
 
 	//hostel_provider_user area
+	
+	Route::get('hp/show-basic-data',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'show']);
+	Route::get('hp/show-image/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'indexImage']);
 
-	Route::view('hp', 'hostelProvider.hostelRegistration.registration');
+	Route::get('hp/complete-registartion-image/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'uploadImage']);
+
+	Route::get('hp/complete-registartion-image-trash/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'deleteImage']);
+
+	Route::get('hp/complete-registartion-facility/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'facilityIndex' ] );
+
+	Route::post('hp/complete-registartion-facility/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'facilityUpload' ] );
+
+	Route::get('hp/complete-registartion-facility-trash/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'facilityDelete' ] );
+
+	Route::get('hp/complete-registartion-price/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'priceIndex' ] );
+
+	Route::post('hp/complete-registartion-price/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'priceUpload' ] );
+
+	Route::put('hp/complete-registartion-price-edit/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'priceEdit' ] );
 });
 
 Route::group(['prefix' => 'ad', 'middleware' => 'admin', 'middleware' => 'auth'], function(){

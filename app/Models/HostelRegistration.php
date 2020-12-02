@@ -26,4 +26,24 @@ class HostelRegistration extends Model
         'policies',
        	'near_by_places'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
+
+    public function hostelConnectImage() {
+       
+        return $this->belongsTo('App\Models\HostelImageSetting');
+    }
+
+    public function hostelConnectFacility() {
+       
+        return $this->belongsTo('App\Models\HostelFacilityManager');
+    }
+
+    public function hostelConnectPrice() {
+       
+        return $this->belongsTo('App\Models\HostelPriceManager');
+    }
 }
