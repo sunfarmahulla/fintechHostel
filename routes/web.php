@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::view('/room-detail', 'frontend/roomDetails');
 
 Route::group(['prefix' => 'user', 'middleware' => 'basicUser'], function(){
 

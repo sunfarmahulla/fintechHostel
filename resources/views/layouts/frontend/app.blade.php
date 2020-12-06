@@ -58,18 +58,10 @@
                 </div>
                 <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                  <ul>
-                    <li class="submenu">
-                    <a href="javascript:void(0);" class="show-submenu">Home<i class="icon-down-open-mini"></i></a>
-                    <ul>
-                        <li><a href="index.html">Home Booking</a></li>
-                        <li><a href="index_5.html">Home Booking date 2</a></li>
-                        <li><a href="index_4.html">Home Carousel</a></li>
-                        <li><a href="index_2.html">Home Layer Slider</a></li>
-                        <li><a href="index_6.html">Home Video bg</a></li>
-                        <li><a href="index_3.html">Home Text Rotator</a></li>
-                    </ul>
+                    <li>
+                    <a href="javascript:void(0);" class="show-submenu">Home</a>
                     </li>
-                    <li><a href="room_list.html">Rooms</a></li>
+                    <li><a href="{{url('/room-detail')}}">Rooms</a></li>
                     <li class="submenu">
                     <a href="javascript:void(0);" class="show-submenu">Auth<i class="icon-down-open-mini"></i></a>
                     <ul>
@@ -78,7 +70,7 @@
                        
                     </ul>
                     </li>
-                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="#">Flats</a></li>
                 </ul>
             </div><!-- End main-menu -->
             

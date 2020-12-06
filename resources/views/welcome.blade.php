@@ -59,245 +59,157 @@
 </div><!-- End parallax-window -->
 <!-- End SubHeader ============================================ -->
         
-<div class="container margin_60_35">
-    <h1 class="main_title"><em></em>Welcome to Recom <span>Hotel and Bed&amp;Breakfast</span></h1>
-    <p class="lead styled">
-        Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit assueverit vix, falli aliquam complectitur ex ius.
-    </p>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="mosaic_container">
-                <img src="frontend/img/mosaic_1.jpg" alt="" class="img-responsive add_bottom_30"><span class="caption_2">Nice Outdoor</span>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="col-xs-12">
-                <div class="mosaic_container">
-                    <img src="frontend/img/mosaic_2.jpg" alt="" class="img-responsive add_bottom_30"><span class="caption_2">Large Bedroom</span>
-                </div>
-            </div>
-            <div class="col-xs-6">
-                <div class="mosaic_container">
-                    <img src="frontend/img/mosaic_3.jpg" alt="" class="img-responsive add_bottom_30"><span class="caption_2">Modern Bathroom</span>
-                </div>
-            </div>
-            <div class="col-xs-6">
-                <div class="mosaic_container">
-                    <img src="frontend/img/mosaic_4.jpg" alt="" class="img-responsive add_bottom_30"><span class="caption_2">Wellness</span>
-                </div>
-            </div>
-        </div>
-    </div><!-- End row -->
-</div><!-- End container -->
-
-<div class="container_styled_1">
-    <div class="container margin_60">
-        <div class="row">
-            <div class="col-md-5 col-md-offset-1">
-                <figure class="room_pic"><a href="#"><img src="frontend/img/room_home_1.jpg" alt="" class="img-responsive"></a><span class="wow zoomIn" data-wow-delay="0.2s"><sup>$</sup>140<small>Per night</small></span></figure>
-            </div>
-            <div class="col-md-4 col-md-offset-1">
-                <div class="room_desc_home">
-                    <h3>Single Room </h3>
-                    <p>
-                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                    </p>
-                    <ul>
-                        <li>
-                        <div class="tooltip_styled tooltip-effect-4">
-                            <span class="tooltip-item"><i class="icon_set_2_icon-104"></i></span>
-                            <div class="tooltip-content">
-                                King size bed
-                            </div>
-                        </div>
-                        </li>
-                        <li>
-                        <div class="tooltip_styled tooltip-effect-4">
-                            <span class="tooltip-item"><i class="icon_set_2_icon-118"></i></span>
-                            <div class="tooltip-content">
-                                Shower
-                            </div>
-                        </div>
-                        </li>
-                        <li>
-                        <div class="tooltip_styled tooltip-effect-4">
-                            <span class="tooltip-item"><i class="icon_set_2_icon-116"></i></span>
-                            <div class="tooltip-content">
-                                Plasma TV
-                            </div>
-                        </div>
-                        </li>
-                    </ul>
-                    <a href="room_list.html" class="btn_1_outline">Read more</a>
-                </div><!-- End room_desc_home -->
-            </div>
-        </div><!-- End row -->
-    </div><!-- End container -->
-</div><!-- End container_styled_1 -->
-
 <div class="container margin_60">
-    <div class="row">
-        <div class="col-md-5 col-md-offset-1 col-md-push-5">
-              <figure class="room_pic left"><a href="#"><img src="frontend/img/room_home_3.jpg" alt="" class="img-responsive"></a><span class="wow zoomIn" data-wow-delay="0.2s"><sup>$</sup>180<small>Per night</small></span></figure>
-        </div>
-        <div class="col-md-4 col-md-offset-1 col-md-pull-6">
-            <div class="room_desc_home">
-                <h3>Double Room </h3>
-                <p>
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                </p>
-                <ul>
-                    <li>
-                    <div class="tooltip_styled tooltip-effect-4">
-                        <span class="tooltip-item"><i class="icon_set_2_icon-104"></i></span>
-                        <div class="tooltip-content">
-                            King size bed
-                        </div>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="tooltip_styled tooltip-effect-4">
-                        <span class="tooltip-item"><i class="icon_set_2_icon-111"></i></span>
-                        <div class="tooltip-content">
-                            Bathtub
-                        </div>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="tooltip_styled tooltip-effect-4">
-                        <span class="tooltip-item"><i class="icon_set_2_icon-116"></i></span>
-                        <div class="tooltip-content">
-                            Plasma TV
-                        </div>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="tooltip_styled tooltip-effect-4">
-                        <span class="tooltip-item"><i class="icon_set_2_icon-106"></i></span>
-                        <div class="tooltip-content">
-                            Safe box
-                        </div>
-                    </div>
-                    </li>
-                </ul>
-                <a href="room_list.html" class="btn_1_outline">Read more</a>
-            </div><!-- End room_desc_home -->
-        </div>
-    </div><!-- End row -->
-</div><!-- End container -->
+      <h2 class="main_title"><em></em>Why We Us <span>Hotel and Bed&amp;Breakfast</span></h2>
+        <p class="lead styled">
+            Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit assueverit vix, falli aliquam complectitur ex ius.
+        </p>
 
-<div class="container_styled_1">
-    <div class="container margin_60">
-        <div class="row">
-            <div class="col-md-5 col-md-offset-1">
-                <figure class="room_pic"><a href="#"><img src="frontend/img/room_home_2.jpg" alt="" class="img-responsive"></a><span class="wow zoomIn" data-wow-delay="0.2s"><sup>$</sup>200<small>Per night</small></span></figure>
+        <div class="row about">
+                <div class="col-md-5 col-sm-6 col-md-offset-1">
+                   <h3>A beatiful contest</h3>
+                        <p>
+                            Esse dicit accusam duo an. Modus simul ei nec. Sea et explicari pertinacia, <strong>cu vitae bonorum</strong> vocibus nec, corpora signiferumque no vim. Ad principes scriptorem duo, te omnium gubergren eam, et eam ancillae appareat dissentiet. Quando tantas animal vis ut, mandamus voluptatum duo ne, ne odio vidit commodo has.
+                        </p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-md-offset-1">
+                <img src="frontend/img/about_1.jpg" alt="" class="img-responsive styled"> 
+                </div>
+      </div><!-- End row -->
+        <div class="divider hidden-xs"></div>
+       <div class="row about" >
+            <div class="col-md-5 col-sm-6 col-md-offset-1 col-md-push-5">
+                 <h3>Charming rooms</h3>
+                        <p>
+                            Esse dicit accusam duo an. Modus simul ei nec. Sea et explicari pertinacia, <strong>cu vitae bonorum</strong> vocibus nec, corpora signiferumque no vim. Ad principes scriptorem duo, te omnium gubergren eam, et eam ancillae appareat dissentiet. Quando tantas animal vis ut, mandamus voluptatum duo ne, ne odio vidit commodo has.
+                        </p>
             </div>
-            <div class="col-md-4 col-md-offset-1">
-                <div class="room_desc_home">
-                    <h3>Suite Room </h3>
-                    <p>
-                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                    </p>
-                    <ul>
-                        <li>
-                        <div class="tooltip_styled tooltip-effect-4">
-                            <span class="tooltip-item"><i class="icon_set_2_icon-104"></i></span>
-                            <div class="tooltip-content">
-                                King size bed
-                            </div>
-                        </div>
-                        </li>
-                        <li>
-                        <div class="tooltip_styled tooltip-effect-4">
-                            <span class="tooltip-item"><i class="icon_set_2_icon-111"></i></span>
-                            <div class="tooltip-content">
-                                Bathtub
-                            </div>
-                        </div>
-                        </li>
-                        <li>
-                        <div class="tooltip_styled tooltip-effect-4">
-                            <span class="tooltip-item"><i class="icon_set_2_icon-116"></i></span>
-                            <div class="tooltip-content">
-                                Plasma TV
-                            </div>
-                        </div>
-                        </li>
-                        <li>
-                        <div class="tooltip_styled tooltip-effect-4">
-                            <span class="tooltip-item"><i class="icon_set_1_icon-15"></i></span>
-                            <div class="tooltip-content">
-                                Welcome bottle
-                            </div>
-                        </div>
-                        </li>
-                        <li>
-                        <div class="tooltip_styled tooltip-effect-4">
-                            <span class="tooltip-item"><i class="icon_set_2_icon-106"></i></span>
-                            <div class="tooltip-content">
-                                Safe box
-                            </div>
-                        </div>
-                        </li>
-                    </ul>
-                    <a href="room_list.html" class="btn_1_outline">Read more</a>
-                </div><!-- End room_desc_home -->
+            <div class="col-md-4 col-sm-6 col-md-offset-1 col-md-pull-6">
+               <img src="frontend/img/about_2.jpg" alt="" class="img-responsive styled"> 
             </div>
         </div><!-- End row -->
+      <div class="divider hidden-xs"></div>
+        <div class="row about">
+                <div class="col-md-5 col-sm-6 col-md-offset-1">
+                   <h3>Enjoy and relax</h3>
+                        <p>
+                            Esse dicit accusam duo an. Modus simul ei nec. Sea et explicari pertinacia, <strong>cu vitae bonorum</strong> vocibus nec.
+                        </p>
+                        <ul class="list_ok">
+                            <li>Spa and Sauna</li>
+                            <li>Body treatments</li>
+                             <li>Swimming pool</li>
+                        </ul>
+                </div>
+                <div class="col-md-4 col-sm-6 col-md-offset-1">
+                <img src="img/about_3.jpg" alt="" class="img-responsive styled"> 
+                </div>
+      </div><!-- End row -->
     </div><!-- End container -->
-</div><!-- End container_styled_1 -->
 
-<section class="promo_full">
-<div class="promo_full_wp">
-    <div>
-        <h3>What Clients say<span>Id tale utinam ius, an mei omnium recusabo iracundia.</span></h3>
-        <div class="container">
+        <div class="container_styled_1">
+        <div class="container margin_60">
+        <h3 class="main_title">General facilities<span>Ad principes scriptorem duo, te omnium gubergren eam.</span></h3>
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="carousel_testimonials">
-                    
-                        <div>
-                            <div class="box_overlay">
-                                <div class="pic">
-                                    <figure><img src="frontend/img/testimonial_1.jpg" alt="" class="img-circle"></figure>
-                                    <h4>Roberta<small>12 October 2015</small></h4>
-                                </div>
-                                <div class="comment">
-                                    "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud. No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
-                                </div>
-                            </div><!-- End box_overlay -->
-                        </div>
-                        
-                        <div>
-                            <div class="box_overlay">
-                                <div class="pic">
-                                    <figure><img src="frontend/img/testimonial_1.jpg" alt="" class="img-circle"></figure>
-                                    <h4>Roberta<small>12 October 2015</small></h4>
-                                </div>
-                                <div class="comment">
-                                    "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud. No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
-                                </div>
-                            </div><!-- End box_overlay -->
-                        </div>
-                        
-                        <div>
-                            <div class="box_overlay">
-                                <div class="pic">
-                                    <figure><img src="frontend/img/testimonial_1.jpg" alt="" class="img-circle"></figure>
-                                    <h4>Roberta<small>12 October 2015</small></h4>
-                                </div>
-                                <div class="comment">
-                                    "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud. No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
-                                </div>
-                            </div><!-- End box_overlay -->
-                        </div>
-                        
-                    </div><!-- End carousel_testimonials -->
-                </div><!-- End col-md-8 -->
+                <div class="col-md-4 col-sm-4">
+                    <div class="box_feat">
+                        <i class="icon_set_1_icon-8"></i>
+                        <h4>Patio garden</h4>
+                        <p>Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea. Ad nam modus iudico rationibus.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                <div class="box_feat">
+                        <i class="icon_set_1_icon-27"></i>
+                        <h4>Parking</h4>
+                        <p>Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea. Ad nam modus iudico rationibus.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                <div class="box_feat">
+                        <i class="icon_set_1_icon-14"></i>
+                        <h4>Room service</h4>
+                        <p>Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea. Ad nam modus iudico rationibus.</p>
+                    </div>
+                </div>
+            </div><!-- End row -->
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="box_feat">
+                        <i class="icon_set_1_icon-22"></i>
+                        <h4>Pet allowed</h4>
+                        <p>Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea. Ad nam modus iudico rationibus.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                <div class="box_feat">
+                        <i class="icon_set_2_icon-103"></i>
+                        <h4>Loundry service</h4>
+                        <p>Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea. Ad nam modus iudico rationibus.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                <div class="box_feat">
+                        <i class="icon_set_1_icon-13"></i>
+                        <h4>Disable</h4>
+                        <p>Ut postea legendos vim, usu an reque novum inimicus, cum aperiri molestiae splendide ea. Ad nam modus iudico rationibus.</p>
+                    </div>
+                </div>
             </div><!-- End row -->
         </div><!-- End container -->
-    </div><!-- End promo_full_wp -->
-</div><!-- End promo_full -->
-</section><!-- End section -->    
+    </div><!-- End container_styled_1 -->
+
+    <section class="promo_full">
+    <div class="promo_full_wp">
+        <div>
+            <h3>What Clients say<span>Id tale utinam ius, an mei omnium recusabo iracundia.</span></h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="carousel_testimonials">
+                        
+                            <div>
+                                <div class="box_overlay">
+                                    <div class="pic">
+                                        <figure><img src="frontend/img/testimonial_1.jpg" alt="" class="img-circle"></figure>
+                                        <h4>Roberta<small>12 October 2015</small></h4>
+                                    </div>
+                                    <div class="comment">
+                                        "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud. No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
+                                    </div>
+                                </div><!-- End box_overlay -->
+                            </div>
+                            
+                            <div>
+                                <div class="box_overlay">
+                                    <div class="pic">
+                                        <figure><img src="frontend/img/testimonial_1.jpg" alt="" class="img-circle"></figure>
+                                        <h4>Roberta<small>12 October 2015</small></h4>
+                                    </div>
+                                    <div class="comment">
+                                        "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud. No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
+                                    </div>
+                                </div><!-- End box_overlay -->
+                            </div>
+                            
+                            <div>
+                                <div class="box_overlay">
+                                    <div class="pic">
+                                        <figure><img src="frontend/img/testimonial_1.jpg" alt="" class="img-circle"></figure>
+                                        <h4>Roberta<small>12 October 2015</small></h4>
+                                    </div>
+                                    <div class="comment">
+                                        "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud. No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
+                                    </div>
+                                </div><!-- End box_overlay -->
+                            </div>
+                            
+                        </div><!-- End carousel_testimonials -->
+                    </div><!-- End col-md-8 -->
+                </div><!-- End row -->
+            </div><!-- End container -->
+        </div><!-- End promo_full_wp -->
+    </div><!-- End promo_full -->
+    </section><!-- End section -->    
 
 @endsection
