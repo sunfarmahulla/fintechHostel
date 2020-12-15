@@ -61,7 +61,6 @@
                     <li>
                     <a href="javascript:void(0);" class="show-submenu">Home</a>
                     </li>
-                    <li><a href="{{url('/room-detail')}}">Rooms</a></li>
                     <li class="submenu">
                     <a href="javascript:void(0);" class="show-submenu">Auth<i class="icon-down-open-mini"></i></a>
                     <ul>
