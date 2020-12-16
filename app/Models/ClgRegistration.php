@@ -24,4 +24,9 @@ class ClgRegistration extends Model
         'college_web_url',
         'photo'
     ];
+
+    public function hostelConnectNearCollege() {
+
+        return $this->hasMany(NearByCollege::class);
+    }
 }

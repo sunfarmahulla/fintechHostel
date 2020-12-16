@@ -11,9 +11,10 @@
                     @csrf
                     @method('get')
                     <div id="group_3">
+                        
                         <div id="container_5">
-                            <label>Let's get started!</label>
-                            <input type="text" class="form-control" name="name_booking" id="name_booking" placeholder="type institue name of Banglore">
+                            <label>Lets Get Started!</label>
+                            <input type="text" class="form-control" name="location" id="name_booking" placeholder="search by Location" >
                         </div>
                        
                     </div><!-- End group_3 -->

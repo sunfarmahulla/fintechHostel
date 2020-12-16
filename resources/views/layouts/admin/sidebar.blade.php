@@ -84,9 +84,6 @@
                             <li class="nk-menu-item">
                                 <a href="{{url('/ad/hostel/create')}}" class="nk-menu-link"><span class="nk-menu-text">Action</span></a>
                             </li>
-                             <li class="nk-menu-item">
-                                <a href="#" class="nk-menu-link"><span class="nk-menu-text">Activity</span></a>
-                            </li>
                             <li class="nk-menu-item">
                                 <a href="{{url('/ad/hostel-list-view')}}" class="nk-menu-link"><span class="nk-menu-text">List Of Hostels</span></a>
                             </li>

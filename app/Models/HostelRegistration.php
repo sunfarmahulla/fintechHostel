@@ -29,21 +29,26 @@ class HostelRegistration extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo(User::class);
     }
 
     public function hostelConnectImage() {
        
-        return $this->belongsTo('App\Models\HostelImageSetting');
+        return $this->belongsTo(HostelImageSetting::class);
     }
 
     public function hostelConnectFacility() {
        
-        return $this->belongsTo('App\Models\HostelFacilityManager');
+        return $this->belongsTo(HostelFacilityManager::class);
     }
 
     public function hostelConnectPrice() {
        
-        return $this->belongsTo('App\Models\HostelPriceManager');
+        return $this->belongsTo(HostelPriceManager::class);
+    }
+
+    public function hostelConnectNearCollege() {
+
+        return $this->belongsTo(NearByCollege::class, 'hostel_connect_id');
     }
 }

@@ -97,6 +97,13 @@ Route::group(['prefix' => 'ad', 'middleware' => 'admin', 'middleware' => 'auth']
 	Route::post('htl/complete-registartion-price/{id}',[App\Http\Controllers\Admin\Hostel\HostelRequirementController::class, 'priceUpload' ] );
 
 	Route::get('htl/complete-registartion-price-edit/{id}',[App\Http\Controllers\Admin\Hostel\HostelRequirementController::class, 'priceEdit' ] );
+
+	Route::get('htl/complete-registartion-hc-near-by-collage/{id}', [App\Http\Controllers\Admin\Hostel\HostelRequirementController::class, 'hcNearByCollageIndex']);
+	
+	Route::post('htl/complete-registartion-hc-near-by-collage/{id}', [App\Http\Controllers\Admin\Hostel\HostelRequirementController::class, 'hcNearByCollageStore']);
+	
+	Route::get('htl/complete-registartion-hc-near-by-collage-trash/{id}', [App\Http\Controllers\Admin\Hostel\HostelRequirementController::class, 'hcNearByCollageTrash']);
+	
 	//End of hostel requirement registration 
 
 	
