@@ -1,7 +1,24 @@
 @extends('layouts.frontend.app')
 
 @section('content')
-    
+<style>
+@media screen and (max-width: 800px) {
+  .filter {
+    display: none;
+  }
+}
+@media screen and (min-width: 800px) {
+    .filter2 {
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .filter2 {
+        display: block;
+    }
+}
+</style>
+   
     <!-- SubHeader =============================================== -->
     <section class="parallax-window" id="short" data-parallax="scroll" data-image-src="frontend/img/sub_header_short.jpg" data-natural-width="1400" data-natural-height="350">
         <div id="subheader">
@@ -12,7 +29,57 @@
 
         <div class="container margin_60">
     	<div class="row">
+            <div class="col-lg-3 col-md-4 sidebar filter">
+     		
+                <div class="theiaStickySidebar">
+                    <div class="box_style_3" id="general_facilities">
+                    <form class="form" action="#" method="get">
+                        @csrf
+                    <div class="row">
+                        <div class="col-sm-6"><h3>Filter</h3></div>
+                        <div class="col-sm-6"><button type="submit" class="btn btn_1">Apply Filter</button></div>
+
+                    </div>
+                        
+                        <div class="form-group">
+                            <label for="">College/Instituet</label>
+                            <input type="text" placeholder="search by institue name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Location</label>
+                            <input type="text" placeholder="search by location in banglore" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Hostel/Pg type</label>
+                            <select class="form-control">
+                                <option value="">Boys only</option>
+                                <option value="">Girls Only</option>
+                                <option value="">Boys/Girls</option>
+                                <option value="">Flat</option>
+
+                            </select>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="box_style_2">
+                        <i class="icon_set_1_icon-90"></i>
+                        <h4>Need help? Call us</h4>
+                        <a href="tel://004542344599" class="phone">+45 423 445 99</a>
+                        <small>Monday to Friday 9.00am - 7.30pm</small>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 sidebar filter2" >
+     		
+                <div class="theiaStickySidebar">
+                    <button class="btn btn-primary" type="">Hello Filter</button>
+
+                </div>
+            </div>
+            
  			<div class="col-lg-9 col-md-8">
+             
             	<div class="row">
                 
                 	<div class="room_desc clearfix" onclick="location.href='/room-details';">
@@ -164,28 +231,6 @@
                     </div>
                 </div><!-- End row room -->    
                 
-            </div>
-            <div class="col-lg-3 col-md-4 sidebar">
-     		
-            <div class="theiaStickySidebar">
-            <div class="box_style_3" id="general_facilities">
-				<h3>General facilities</h3>
-				<ul>
-					<li><i class="icon_set_1_icon-86"></i>Free Wifi</li>
-					<li><i class="icon_set_2_icon-103"></i>Loundry service</li>
-					<li><i class="icon_set_2_icon-110"></i>Swimming pool</li>
-					<li><i class="icon_set_1_icon-58"></i>Restaurant</li>
-					<li><i class="icon_set_1_icon-27"></i>Parking</li>
-				</ul>
-			</div>
-			<div class="box_style_2">
-				<i class="icon_set_1_icon-90"></i>
-				<h4>Need help? Call us</h4>
-				<a href="tel://004542344599" class="phone">+45 423 445 99</a>
-				<small>Monday to Friday 9.00am - 7.30pm</small>
-			</div>
-
-            </div>
             </div>
             
         </div><!-- End row -->        
