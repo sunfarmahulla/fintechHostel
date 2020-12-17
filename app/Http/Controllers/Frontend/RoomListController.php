@@ -15,12 +15,22 @@ class RoomListController extends Controller
 
         $location = $request->get('location');
        
-        $query = HostelRegistration::where('state', 'LIKE', "%{$location}%")
+        $data = HostelRegistration::where('state', 'LIKE', "%{$location}%")
             ->orwhere('city', 'LIKE', "%{$location}%")
             ->orwhere('address_1' , 'LIKE', "%{$location}%")
             ->orwhere('address_2' , 'LIKE', "%{$location}%")
             ->orwhere('unique_id', 'LIKE', "%{$location}%")
             ->get();
-        return view('frontend.roomList',['query' => $query]);
+        // echo json_encode($data->hostelConnectPrice);
+        // die();
+       // with('hostelConnectFacility', 'hostelConnectImage', 'hostelConnectPrice', 'hostelConnectNearCollege')
+        return view('frontend.roomList',['data' => $data]);
     }
+
+    public function roomDetails($id) {
+
+        $data = HostelRegistration::where('id', $id)->first();
+        return view('frontend/roomDetails', ['data' => $data]);
+    }
+
 }

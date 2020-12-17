@@ -20,8 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::view('/room-details', 'frontend/roomDetails');
+
 Route::get('/room-list',[App\Http\Controllers\Frontend\RoomListController::class,'roomList']);
+Route::get('/filter', [App\Http\Controllers\Frontend\RoomListController::class, 'filter']);
+
+Route::get('/room-details/{id}',[App\Http\Controllers\Frontend\RoomListController::class,'roomDetails']);
 
 Route::group(['prefix' => 'user', 'middleware' => 'basicUser'], function(){
 

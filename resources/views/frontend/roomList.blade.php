@@ -33,8 +33,9 @@
      		
                 <div class="theiaStickySidebar">
                     <div class="box_style_3" id="general_facilities">
-                    <form class="form" action="#" method="get">
+                    <form class="form" action="filter" method="get">
                         @csrf
+                        @method('get')
                     <div class="row">
                         <div class="col-sm-6"><h3>Filter</h3></div>
                         <div class="col-sm-6"><button type="submit" class="btn btn_1">Apply Filter</button></div>
@@ -73,166 +74,48 @@
             <div class="col-lg-3 col-md-4 sidebar filter2" >
      		
                 <div class="theiaStickySidebar">
-                    <button class="btn btn-primary" type="">Hello Filter</button>
-
+                    <button class="btn btn_1" type="">Apply Filter</button>
                 </div>
             </div>
             
  			<div class="col-lg-9 col-md-8">
              
+             @forelse ($data as $row)
             	<div class="row">
                 
-                	<div class="room_desc clearfix" onclick="location.href='/room-details';">
+                	<div class="room_desc clearfix" onclick="location.href='/room-details/{{$row->id}}';">
                 	<div class="col-md-7">
-                    	<figure><img src="frontend/img/room_list_1.jpg" alt="" class="img-responsive"></figure>
+                    	<figure>
+                        @foreach($row->hostelConnectImage->slice(0, 1) as $key)
+                            <img src="{{asset('images/'.$key->image_url)}}" alt="" class="img-responsive">
+                        @endforeach
+                        </figure>
                     </div>
                     <div class="col-md-5 room_list_desc">
-                    	<h3>Single Room</h3>
-                        <p>Id tale utinam ius, an mei omnium recusabo iracundia. Mea ad postea meliore fuisset.....</p>
+                    	<h3>{{ucfirst($row->hostel_type)}} Hostel</h3>
+                        <p>{!!substr($row->description, 0,60)!!}...</p>
                         <ul>
+                        @foreach($row->hostelConnectFacility as $key)
                         	<li>
                             <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-104"></i></span>
-                                	<div class="tooltip-content">King size bed</div>
+                            	<span class="tooltip-item"><i class="{{$key->icon_tag}}"></i></span>
+                                	<div class="tooltip-content">{{$key->facility_name}}</div>
                               </div>
                               </li>
                             <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-118"></i></span>
-                                	<div class="tooltip-content">Shower</div>
-                              </div>
-                              </li>
-                            <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-116"></i></span>
-                                	<div class="tooltip-content">Plasma TV</div>
-                              </div>
-                              </li>
+                        @endforeach
                         </ul>
-                        <div class="price">from <strong>$115</strong> /night<small>Breakafst included</small></div>
+                        
+                        <div class="price">Available Price: <strong><s>{{$row->hostelConnectPrice->actual_price}}</s>/{{$row->hostelConnectPrice->discount_price}}</strong> /month<small>Breakafst included</small></div>
+                        
                     </div>
                     </div>
                 </div><!-- End row room -->  
-                
-                <div class="row">
-                	<div class="room_desc clearfix wow fadeIn" onclick="location.href='room_detail.html';" data-wow-delay="0.1s">
-                	<div class="col-md-7">
-                    	<figure><img src="frontend/img/room_list_2.jpg" alt="" class="img-responsive"></figure>
-                    </div>
-                    <div class="col-md-5 room_list_desc">
-                    	<h3>Double Room</h3>
-                        <p>Id tale utinam ius, an mei omnium recusabo iracundia. Mea ad postea meliore fuisset.....</p>
-                        <ul>
-                        	<li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-104"></i></span>
-                                	<div class="tooltip-content">King size bed</div>
-                              </div>
-                              </li>
-                            <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-118"></i></span>
-                                	<div class="tooltip-content">Shower</div>
-                              </div>
-                              </li>
-                            <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-116"></i></span>
-                                	<div class="tooltip-content">Plasma TV</div>
-                              </div>
-                              </li>
-                        </ul>
-                        <div class="price">from <strong>$115</strong> /night<small>Breakafst included</small></div>
-                    </div>
-                    </div>
-                </div><!-- End row room --> 
-                
-                <div class="row">
-                	<div class="room_desc clearfix wow fadeIn" onclick="location.href='room_detail.html';" data-wow-delay="0.1s">
-                	<div class="col-md-7">
-                    	<figure><img src="frontend/img/room_list_3.jpg" alt="" class="img-responsive"></figure>
-                    </div>
-                    <div class="col-md-5 room_list_desc">
-                    	<h3>Double Room Luxury</h3>
-                        <p>Id tale utinam ius, an mei omnium recusabo iracundia. Mea ad postea meliore fuisset.....</p>
-                        <ul>
-                        	<li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-104"></i></span>
-                                	<div class="tooltip-content">King size bed</div>
-                              </div>
-                              </li>
-                            <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-118"></i></span>
-                                	<div class="tooltip-content">Shower</div>
-                              </div>
-                              </li>
-                            <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-116"></i></span>
-                                	<div class="tooltip-content">Plasma TV</div>
-                              </div>
-                              </li>
-                                <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-106"></i></span>
-                                	<div class="tooltip-content">Safe box</div>
-                              </div>
-                              </li>
-                        </ul>
-                        <div class="price">from <strong>$115</strong> /night<small>Breakafst included</small></div>
-                    </div>
-                    </div>
-                </div><!-- End row room --> 
-                
-                <div class="row">
-                	<div class="room_desc clearfix wow fadeIn" onclick="location.href='room_detail.html';" data-wow-delay="0.1s">
-                	<div class="col-md-7">
-                    	<figure><img src="frontend/img/room_list_4.jpg" alt="" class="img-responsive"></figure>
-                    </div>
-                    <div class="col-md-5 room_list_desc">
-                    	<h3>Suite Room</h3>
-                        <p>Id tale utinam ius, an mei omnium recusabo iracundia. Mea ad postea meliore fuisset.....</p>
-                        <ul>
-                        	<li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-104"></i></span>
-                                	<div class="tooltip-content">King size bed</div>
-                              </div>
-                              </li>
-                            <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-111"></i></span>
-                                	<div class="tooltip-content">Bathtub</div>
-                              </div>
-                              </li>
-                            <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-116"></i></span>
-                                	<div class="tooltip-content">Plasma TV</div>
-                              </div>
-                              </li>
-                               <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_1_icon-15"></i></span>
-                                	<div class="tooltip-content">Welcome bottle</div>
-                              </div>
-                              </li>
-                              <li>
-                            <div class="tooltip_styled tooltip-effect-4">
-                            	<span class="tooltip-item"><i class="icon_set_2_icon-106"></i></span>
-                                	<div class="tooltip-content">Safe box</div>
-                              </div>
-                              </li>
-                        </ul>
-                        <div class="price">from <strong>$115</strong> /night<small>Breakafst included</small></div>
-                    </div>
-                    </div>
-                </div><!-- End row room -->    
+                @empty
+                <p>Sorry! no data found</p>
+                @endforelse
                 
             </div>
-            
         </div><!-- End row -->        
     </div><!-- End container -->
 

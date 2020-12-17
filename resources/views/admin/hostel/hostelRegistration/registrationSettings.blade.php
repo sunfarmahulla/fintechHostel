@@ -65,7 +65,7 @@ $user = App\Models\User::where('id',$data->user_id)->first();
                                         <div class="data-item" data-toggle="modal" data-target="#profile-edit">
                                             <div class="data-col">
                                                 <span class="data-label">Hostel Type</span>
-                                                <span class="data-value text-soft">{{$user->hostel_type}}</span>
+                                                <span class="data-value text-soft">{{$data->hostel_type}}</span>
                                             </div>
                                             <div class="data-col data-col-end"><span class="data-more"><em class="icon ni ni-forward-ios"></em></span></div>
                                         </div><!-- data-item -->

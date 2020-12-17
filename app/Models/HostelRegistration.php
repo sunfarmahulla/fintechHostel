@@ -34,21 +34,21 @@ class HostelRegistration extends Model
 
     public function hostelConnectImage() {
        
-        return $this->belongsTo(HostelImageSetting::class);
+        return $this->hasMany(HostelImageSetting::class, 'hostel_connect_id');
     }
 
     public function hostelConnectFacility() {
        
-        return $this->belongsTo(HostelFacilityManager::class);
+        return $this->hasMany(HostelFacilityManager::class, 'hostel_connect_id');
     }
 
     public function hostelConnectPrice() {
        
-        return $this->belongsTo(HostelPriceManager::class);
+        return $this->hasOne(HostelPriceManager::class, 'hostel_connect_id');
     }
 
     public function hostelConnectNearCollege() {
 
-        return $this->belongsTo(NearByCollege::class, 'hostel_connect_id');
+        return $this->hasMany(NearByCollege::class, 'hostel_connect_id');
     }
 }

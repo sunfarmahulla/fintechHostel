@@ -14,6 +14,6 @@ class HostelFacilityManager extends Model
 
     public function hostelConnect()
     {
-        return $this->hasMany(App\Models\HostelRegistration::class);
+        return $this->belongsTo(HostelRegistration::class);
     }
 }

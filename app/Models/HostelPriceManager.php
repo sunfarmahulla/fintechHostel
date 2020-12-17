@@ -15,6 +15,6 @@ class HostelPriceManager extends Model
 
     public function hostelConnect()
     {
-        return $this->hasOne(HostelRegistration::class);
+        return $this->belongsTo(HostelRegistration::class);
     }
 }

@@ -15,7 +15,7 @@ class NearByCollege extends Model
 
     public function hostelConnect()
     {
-        return $this->hasMany(HostelRegistration::class);
+        return $this->belongsTo(HostelRegistration::class);
     }
 
     public function clgRegister() {

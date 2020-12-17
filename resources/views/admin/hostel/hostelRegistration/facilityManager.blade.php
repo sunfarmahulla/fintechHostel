@@ -61,9 +61,22 @@ $user = App\Models\User::where('id',$data->user_id)->first();
                                                                     <label class="form-label" for="default-06">Select Facility Icon</label>
                                                                     <div class="form-control-wrap">
                                                                         <select class="form-select form-control form-control-lg" name="font_icon" data-search="on" required>
-                                                                         
-                                                                                <option value="fa fa-wifi">wifi</option>
-                                                                                <option value="fas fa-air-conditioner">ac</option>
+                                                                                <option value="icon_set_1_icon-86">WiFi</option>
+                                                                                <option value="icon_set_2_icon-102">Luggage Facility</option>
+                                                                                <option value="icon_set_2_icon-103">Hangers</option>
+                                                                                <option value="icon_set_2_icon-104">Bed</option>
+                                                                                <option value="icon_set_2_icon-105">Person</option>
+                                                                                <option value="icon_set_2_icon-106">Telephone</option>
+                                                                                <option value="icon_set_2_icon-110">Swimming pool</option>
+                                                                                <option value="icon_set_2_icon-111">Bathtub</option>
+                                                                                <option value="icon_set_2_icon-112">Medical</option>
+                                                                                <option value="icon_set_2_icon-114">Double Bed</option>
+                                                                                <option value="icon_set_2_icon-115">Floor Bed</option>
+                                                                                <option value="icon_set_2_icon-116">TV</option>
+                                                                                <option value="icon_set_2_icon-117">Gym</option>
+                                                                                <option value="icon_set_2_icon-118">Bathroom</option>
+                                                                                <option value="icon_set_1_icon-58">Fooding</option>
+
                                                                           </select>
                                                                     </div>
                                                                 </div>
