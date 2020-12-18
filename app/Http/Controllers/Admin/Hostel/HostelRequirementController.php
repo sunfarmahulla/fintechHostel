@@ -153,7 +153,8 @@ class HostelRequirementController extends Controller
 
       $data = new NearByCollege();
     	$data->hostel_connect_id = $id;
-    	$data->college_id = $request->get('college');
+      $data->college_id = $request->get('college');
+      $data->distance = $request->get('distance');
       
       if($data->save() == true) {
     		return Redirect::back()->with('success', 'successfully data saved');

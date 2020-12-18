@@ -67,6 +67,10 @@ $user = App\Models\User::where('id',$data->user_id)->first();
                                                                                     @endforeach
                                                                                 </select>
                                                                             </div>
+                                                                            <div class="form-group">
+                                                                                <label class="form-label" for="default-06">Type Distance From This Hostel in KM</label>
+                                                                                <input type="number" min="1" class="form-control" name="distance" placeholder="distance in km from this hostel" required>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -92,9 +96,12 @@ $user = App\Models\User::where('id',$data->user_id)->first();
                                               <img  src="{{asset('images/'.$row->clgRegister->college_logo_url)}}" width="50px" height="50px" alt="">
                                                 <li></li>
                                                 <li><b>College Name:</b>&nbsp;&nbsp;{{$row->clgRegister->college_name}}</li>
+                                                <li><b>Distance From Hostel:</b>&nbsp;&nbsp;{{$row->distance}} km</li>
+
                                                 <li><b>Address_1:</b>&nbsp;&nbsp;{{$row->clgRegister->college_address_1}}</li>
                                                 <li><b>Address_2:</b>&nbsp;&nbsp;{{$row->clgRegister->college_address_2}}</li>
                                                 <li><b>City:</b>&nbsp;&nbsp;{{$row->clgRegister->city.','.$row->clgRegister->state}}</li>
+
                                               </ul>
                                             </div>
                                             <div class="data-col data-col-end"><span class="data-more disable"><a href="{{url('ad/htl/complete-registartion-hc-near-by-collage-trash/'.$row->id)}}" title="delete image"><em class="icon ni ni-trash-fill"></em></a></span></div>

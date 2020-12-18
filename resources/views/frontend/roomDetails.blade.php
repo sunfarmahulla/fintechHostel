@@ -93,7 +93,7 @@
                             <tr>
                                 <td><img src="{{asset('images/'.$row->clgRegister->college_logo_url)}}" width="25px" height="25px"></td>
                                 <td>{{$row->clgRegister->college_name}}</td>
-                                <td>distance</td>
+                                <td>{{$row->distance}} km</td>
                             </tr>
                         @endforeach
                         </tbody>
