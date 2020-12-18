@@ -235,7 +235,7 @@
                         <div class="form-control-wrap">
                              
                             <div class="form-group">
-                                <textarea id="editor2" name="nearplace">{{empty($hostelData->near_by_places) ?old('nearplace') : $hostelData->near_by_places}}</textarea>
+                                <textarea id="editor2" name="nearplace">{!!empty($hostelData->near_by_places) ?old('nearplace') : $hostelData->near_by_places!!}</textarea>
                             </div>
                       
                         </div>

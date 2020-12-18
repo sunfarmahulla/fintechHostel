@@ -11,7 +11,7 @@ class NearByCollege extends Model
 
     protected $table = 'hc_near_by_clg';
 
-    protected $fillable = ['hostel_connect_id', 'college_id'];
+    protected $fillable = ['hostel_connect_id', 'college_id', 'distance'];
 
     public function hostelConnect()
     {
