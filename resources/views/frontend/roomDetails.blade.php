@@ -1,12 +1,15 @@
 @extends('layouts.frontend.room_details')
 
 @section('content')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 {!! NoCaptcha::renderJs() !!}
 	<div class="carousel_in">
     @foreach($data->hostelConnectImage as $row)
       <div><img src="{{asset('images/'.$row->image_url)}}" alt=""><div class="caption"></div></div>
     @endforeach
     </div>
-    
+
+
     
 <h1 class="main_title_in" style="color:red">{{ucfirst($data->hostel_name)}}/{{ucfirst($data->hostel_type)}}</h1>
   <div class="container add_bottom_60">
@@ -107,7 +110,7 @@
                     <h3>Near Places</hh3>
                 </div>
                 <div class="col-md-9">
-                    {!!$data->near_by_places!!}
+                   <p> {!!$data->near_by_places!!}</p>
                 </div>
             </div>
 
@@ -117,7 +120,7 @@
                     <h3>Policies</h3>
                 </div>
                 <div class="col-md-9">
-                    {!!$data->policies!!}
+                   <p> {!!$data->policies!!}</p>
                 </div>
             </div>
             <hr>
@@ -206,25 +209,49 @@
               <div class="col-md-4" id="sidebar">
             <div class="theiaStickySidebar">
             	<div class="box_style_1">
-                    <div id="message-booking"></div>
-                    <form method="post" action="assets/check_avail.php" id="check_avail" autocomplete="off" >                    	
+                    <div id="message-booking">
+                    @if(Session::get('success'))
+                        <div class="alert alert-success">
+                            <p>{{session::get('success')}}</p>
+                        </div>
+                    @endif</div>
+                    
+                    <form  action="/customer-hostel-booking"  autocomplete="off" method="POST" > 
+                    @csrf
+                    @method('post')        
+                    <input type="hidden" name="hostel_id" value="{{ $data->id}}">           	
                         <div class="row">
                             <div class="col-md-12 col-sm-6">
-                                <div class="form-group">
+                                <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                                     <label>Name</label>
-                                        <input type="text" class="form-control" name="name_booking" id="name_booking" placeholder="Name and Last name">
+                                        <input type="text" class="form-control" name="name" id="name_booking" placeholder="Name and Last name">
+                                        @if ($errors->has('name'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('name') }}</strong>
+                                            </span>
+                                        @endif
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-6">
-                                <div class="form-group">
+                                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                     <label>Email</label>
-                                    <input type="text" class="form-control" name="email_booking" id="email_booking" placeholder="Your email">
+                                    <input type="text" class="form-control" name="email" id="email_booking" placeholder="Your email">
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-6">
-                                <div class="form-group">
+                                <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
                                     <label>Mobile</label>
                                     <input type="text" class="form-control" name="mobile"  placeholder="Your mobile number">
+                                    @if ($errors->has('mobile'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('mobile') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-6">
@@ -249,6 +276,17 @@
                                     
                                 </div>
                             </div>
+                            <div class="col-md-12 col-sm-6">
+                                <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                                <label>Captcha</label>
+                                    {!! app('captcha')->display() !!}
+                                    @if ($errors->has('g-recaptcha-response'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
                             <div class="col-md-12 col-sm-12">
                                 <div class="form-group">
                                     <input type="submit" value="Book now" class="btn_full" id="submit-booking">
@@ -269,5 +307,6 @@
         
         
     </div><!-- End container -->
+
            
 @endsection

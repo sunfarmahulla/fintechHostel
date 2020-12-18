@@ -21,9 +21,9 @@
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
-                        <a href="#" class="nk-menu-link">
+                        <a href="{{url('/ad/list-of-booked-hostel')}}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-mail"></em></span>
-                            <span class="nk-menu-text">Mail Management</span>
+                            <span class="nk-menu-text">Booking Management Section</span>
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-heading">

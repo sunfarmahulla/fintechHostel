@@ -25,6 +25,7 @@ Route::get('/room-list',[App\Http\Controllers\Frontend\RoomListController::class
 Route::get('/filter', [App\Http\Controllers\Frontend\RoomListController::class, 'filter']);
 
 Route::get('/room-details/{id}',[App\Http\Controllers\Frontend\RoomListController::class,'roomDetails']);
+Route::post('/customer-hostel-booking', [App\Http\Controllers\Frontend\HostelBookingController::class, 'hostelBooking']);
 
 Route::group(['prefix' => 'user', 'middleware' => 'basicUser'], function(){
 
@@ -109,6 +110,7 @@ Route::group(['prefix' => 'ad', 'middleware' => 'admin', 'middleware' => 'auth']
 	
 	//End of hostel requirement registration 
 
-	
+	Route::get('/list-of-booked-hostel', [App\Http\Controllers\Frontend\HostelBookingController::class, 'hostelBookedList']);
+	Route::post('/list-of-booked-hostel-edit/{id}', [App\Http\Controllers\Frontend\HostelBookingController::class, 'hostelBookedStatusEdit']);	
 
 });

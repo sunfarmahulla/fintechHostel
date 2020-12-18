@@ -51,4 +51,8 @@ class HostelRegistration extends Model
 
         return $this->hasMany(NearByCollege::class, 'hostel_connect_id');
     }
+
+    public function hostelBooking() {
+        return $this->hasOne(HostelBooking::class, 'hostel_connect_id');
+    }
 }
