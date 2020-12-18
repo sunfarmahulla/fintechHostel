@@ -16,8 +16,9 @@
             <div class="card-head">
                 <h5 class="card-title">Registration Form</h5>
             </div>
-            <form action="ad/htl" class="gy-3" enctype="multipart/form-data" method="POST">
+            <form action="{{url('ad/htl/'.$hostelData->id)}}" class="gy-3" enctype="multipart/form-data" method="POST">
             @csrf
+            @method('put')
 
              <div class="row g-3 align-center">
                     <div class="col-lg-5">
@@ -34,8 +35,10 @@
                                 
                                 @php 
                                     $data = \App\Models\User::where('role', 'hostelrp')->get();
+                                    $hostel_provider = \App\Models\User::where('id', $hostelData->user_id)->first();
 
                                 @endphp
+                                    <option value="{{$hostel_provider->id}}">Name: {{$hostel_provider->name}}, email: {{$hostel_provider->email}}</option>
 
                                 @foreach($data as $row)
                                     <option value="{{$row->id}}">Name: {{$row->name}}, email: {{$row->email}}</option>
@@ -63,6 +66,7 @@
                                     $data = \App\Models\ServiceState::all();
 
                                 @endphp
+                                <option value="{{$hostelData->state}}">{{$hostelData->state}}</option>
 
                                 @foreach($data as $row)
                                     <option value="{{$row->state_name}}">{{$row->state_name}}</option>
@@ -83,7 +87,7 @@
                     <div class="col-lg-7">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" name="htl_name"  value="{{old('htl_name')}}" placeholder="Hostel name" required>
+                                <input type="text" class="form-control" name="htl_name"  value="{{empty($hostelData->hostel_name)?old('htl_name'):$hostelData->hostel_name}}" placeholder="Hostel name" required>
                             </div>
                         </div>
                     </div>
@@ -98,7 +102,8 @@
                     <div class="col-lg-7">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <textarea class="form-control" name="htl_address_1" value="{{old('htl_address_1')}}"  placeholder="Hostel Address 1" required></textarea>
+                                <textarea class="form-control" name="htl_address_1" value=""  placeholder="Hostel Address 1" required>
+                                {{empty($hostelData->address_1)?old('htl_address_1'):$hostelData->address_1}}</textarea>
                             </div>
                         </div>
                     </div>
@@ -113,7 +118,8 @@
                     <div class="col-lg-7">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <textarea class="form-control" name="htl_address_2" value="{{old('htl_address_2')}}"  placeholder="hostel Address 2" required></textarea>
+                                <textarea class="form-control" name="htl_address_2" value=""  placeholder="hostel Address 2" required>
+                                {{empty($hostelData->address_2)?old('htl_address_2'):$hostelData->address_2}}</textarea>
                             </div>
                         </div>
                     </div>
@@ -128,7 +134,7 @@
                     <div class="col-lg-7">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" name="htl_city"  value="{{old('htl_city')}}" placeholder="City name" required>
+                                <input type="text" class="form-control" name="htl_city"  value="{{empty($hostelData->city)?old('htl_city'):$hostelData->city}}" placeholder="City name" required>
                             </div>
                         </div>
                     </div>
@@ -143,7 +149,7 @@
                     <div class="col-lg-7">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control" name="htl_pin"  value="{{old('htl_pin')}}" placeholder="postel code" required>
+                                <input type="text" class="form-control" name="htl_pin"  value="{{empty($hostelData->pin_code)?old('htl_pin'):$hostelData->pin_code}}" placeholder="postel code" required>
                             </div>
                         </div>
                     </div>
@@ -161,6 +167,7 @@
                         <label class="form-label">Select Hostel/PG Type</label>
                         <div class="form-control-wrap">
                             <select class="form-select form-control form-control-lg" name="htl_type" required data-search="on">
+                                <option value="{{$hostelData->hostel_type}}">{{$hostelData->hostel_type}}</option>
                                 <option value="boys">Only Boys</option>
                                 <option value="girls">Only Girls</option>
                                 <option value="family">Family</option>
@@ -186,7 +193,7 @@
                         <div class="form-control-wrap">
                              
                             <div class="form-group">
-                                <textarea id="editor" name="description">Write Short Hostel Description or About</textarea>
+                                <textarea id="editor" name="description">{{empty($hostelData->description) ?old('description') : $hostelData->description}}</textarea>
                             </div>
                       
                         </div>
@@ -207,7 +214,7 @@
                         <div class="form-control-wrap">
                              
                             <div class="form-group">
-                                <textarea id="editor1" name="policies"></textarea>
+                                <textarea id="editor1" name="policies">{!!empty($hostelData->policies) ?old('policies') : $hostelData->policies!!}</textarea>
                             </div>
                       
                         </div>
@@ -228,7 +235,7 @@
                         <div class="form-control-wrap">
                              
                             <div class="form-group">
-                                <textarea id="editor2" name="nearplace"></textarea>
+                                <textarea id="editor2" name="nearplace">{{empty($hostelData->near_by_places) ?old('nearplace') : $hostelData->near_by_places}}</textarea>
                             </div>
                       
                         </div>

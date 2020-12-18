@@ -144,7 +144,45 @@ class HostelRegistrationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $attribute = request()->validate([
+            'state_name' => ['required'],
+            'htl_name' => ['required'],
+            'htl_address_1' => ['required'],
+            'htl_address_2' => ['required'],
+            'htl_city' => ['required'],
+            'htl_pin' => ['required'],
+            'htl_type' => ['required'],
+            'description' => ['required'],
+            'policies' => ['required'],
+            'nearplace' => ['required']
+        ]);
+       
+      
+        $data = HostelRegistration::find($id);
+        $data->user_id = $request->get('user');
+        $data->hostel_name = $request->get('htl_name');
+        $data->address_1 = $request->get('htl_address_1');
+        $data->address_2 = $request->get('htl_address_2');
+        $data->city = $request->get('htl_city');
+        $data->state =  $request->get('state_name');
+        $data->pin_code = $request->get('htl_pin'); 
+        $data->hostel_type = $request->get('htl_type');
+        $data->description = $request->get('description'); 
+        $data->policies = $request->get('policies'); 
+        $data->near_by_places = $request->get('nearplace');
+
+        if($data->save()==true) {
+           
+            return Redirect::back()->with('success', 'Successfully updated data ');
+        
+        }else {
+            
+            return Redirect::back()->with('danger', 'something is error with hostel data');
+        }
+
+
+
+
     }
 
     /**
