@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col--md-3 col-sm-3 col-xs-3">
                 <a href="{{'/'}}" >
-                <img src="{{asset('logo/logo.png')}}" width="70" height="60" alt="" data-retina="true">
+                <img src="{{asset('logo/logo.png')}}" width="80" height="60" alt="" data-retina="true">
                 </a>
             </div>
             <nav class="col--md-9 col-sm-9 col-xs-9">

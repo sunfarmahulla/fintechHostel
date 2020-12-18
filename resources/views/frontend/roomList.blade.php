@@ -93,7 +93,7 @@
                     </div>
                     <div class="col-md-5 room_list_desc">
                     	<h3>{{ucfirst($row->hostel_type)}} Hostel</h3>
-                        <p>{!!substr($row->description, 0,60)!!}...</p>
+                        <p>{!! Str::limit(strip_tags($row->description), $limit = 100, $end = '...') !!}</p>
                         <ul>
                         @foreach($row->hostelConnectFacility as $key)
                         	<li>
