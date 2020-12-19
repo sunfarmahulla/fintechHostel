@@ -23,7 +23,7 @@ class RoomListController extends Controller
             ->orwhere('address_1' , 'LIKE', "%{$location}%")
             ->orwhere('address_2' , 'LIKE', "%{$location}%")
             ->orwhere('unique_id', 'LIKE', "%{$location}%")
-            ->get();
+            ->paginate(10);
         // echo json_encode($data->hostelConnectPrice);
         // die();
        // with('hostelConnectFacility', 'hostelConnectImage', 'hostelConnectPrice', 'hostelConnectNearCollege')
@@ -64,7 +64,7 @@ class RoomListController extends Controller
                 
             }
     
-        })->get();
+        })->paginate(10);
         return view('frontend.roomList',['data' => $data]);
 
     }

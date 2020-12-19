@@ -82,9 +82,62 @@
             <div class="col-lg-3 col-md-4 sidebar filter2" >
      		
                 <div class="theiaStickySidebar">
-                    <button class="btn btn_1" type="">Apply Filter</button>
+                    <button type="button" class="btn btn_1" data-toggle="modal" data-target="#filter"><i class="icon-filter"></i> Apply Filter</button>
                 </div>
             </div>
+            <!-- model filter -->
+            <div class="modal fade" id="filter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Filter Options</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" action="/filter" method="get">
+                        @csrf
+                        @method('get')
+                        <div class="form-group">
+                            <label class="form-label">Hostel-type</label>
+                            </br>
+                            @php $hostel_type = Request::input('hostel_type'); @endphp
+                            <select class="form-control" name="hostel_type">
+                                <option value="">All</option>
+                                <option value="boys" {{($hostel_type=="boys") ? 'selected' :'' }}>Boys</option>
+                                <option value="girls" {{($hostel_type=="girls") ? 'selected' :'' }} >Girls</option>
+                                <option value="boys-girls" {{($hostel_type=="boys-girls") ? 'selected' :'' }}>Boys/girls</option>
+                                <option value="flat" {{($hostel_type=="flat") ? 'selected' :'' }}>Flat</option>
+                                <option value="family" {{($hostel_type=="family") ? 'selected' :'' }}>Family</option>
+                                <option value="">All</option>
+                            </select>
+                            
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="">College/Instituet</label>
+                            <input type="text" placeholder="search by institue name" name="college" value="{{Request::input('college')}}" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Location</label>
+                            <input type="text" placeholder="search by location in banglore" name="location" value="{{Session::has('location')? Session::get('location') : Request::input('location')}}" class="form-control">
+                        </div>
+                       
+                        
+                       
+                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn_1">Apply Filter</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- end of model filter-->
+            <br></br>
             
  			<div class="col-lg-9 col-md-8">
              
@@ -122,8 +175,9 @@
                 @empty
                 <p>Sorry! no data found</p>
                 @endforelse
-                
+                {!! $data->render() !!}
             </div>
+            
         </div><!-- End row -->        
     </div><!-- End container -->
 
