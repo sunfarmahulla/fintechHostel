@@ -45,8 +45,9 @@
                         <div class="form-group">
                             <label class="form-label">Hostel-type</label>
                             </br>
-                            @php $hostel_type = Session::get('hostel_type'); @endphp
+                            @php $hostel_type = Request::input('hostel_type'); @endphp
                             <select class="form-control" name="hostel_type">
+                                <option value="">All</option>
                                 <option value="boys" {{($hostel_type=="boys") ? 'selected' :'' }}>Boys</option>
                                 <option value="girls" {{($hostel_type=="girls") ? 'selected' :'' }} >Girls</option>
                                 <option value="boys-girls" {{($hostel_type=="boys-girls") ? 'selected' :'' }}>Boys/girls</option>
