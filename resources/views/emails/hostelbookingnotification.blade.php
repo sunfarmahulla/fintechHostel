@@ -9,7 +9,7 @@
 
 @endcomponent
 
-@component('mail::button', ['url' => 'https://hostelconnect.in/room-details/'.{{$id}}, 'color' =>'success'])
+@component('mail::button', ['url' => 'https://hostelconnect.in', 'color' =>'success'])
  Hostel Link
 @endcomponent
 

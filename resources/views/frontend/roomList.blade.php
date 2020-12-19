@@ -1,6 +1,7 @@
 @extends('layouts.frontend.app')
 
 @section('content')
+
 <style>
 @media screen and (max-width: 800px) {
   .filter {
@@ -33,7 +34,7 @@
      		
                 <div class="theiaStickySidebar">
                     <div class="box_style_3" id="general_facilities">
-                    <form class="form" action="filter" method="get">
+                    <form class="form" action="/filter" method="get">
                         @csrf
                         @method('get')
                     <div class="row">
@@ -41,26 +42,32 @@
                         <div class="col-sm-6"><button type="submit" class="btn btn_1">Apply Filter</button></div>
 
                     </div>
+                        <div class="form-group">
+                            <label class="form-label">Hostel-type</label>
+                            </br>
+                            @php $hostel_type = Session::get('hostel_type'); @endphp
+                            <select class="form-control" name="hostel_type">
+                                <option value="boys" {{($hostel_type=="boys") ? 'selected' :'' }}>Boys</option>
+                                <option value="girls" {{($hostel_type=="girls") ? 'selected' :'' }} >Girls</option>
+                                <option value="boys-girls" {{($hostel_type=="boys-girls") ? 'selected' :'' }}>Boys/girls</option>
+                                <option value="flat" {{($hostel_type=="flat") ? 'selected' :'' }}>Flat</option>
+                                <option value="family" {{($hostel_type=="family") ? 'selected' :'' }}>Family</option>
+                                <option value="">All</option>
+                            </select>
+                            
+                        </div>
                         
                         <div class="form-group">
                             <label for="">College/Instituet</label>
-                            <input type="text" placeholder="search by institue name" class="form-control">
+                            <input type="text" placeholder="search by institue name" name="college" value="{{Request::input('college')}}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="">Location</label>
-                            <input type="text" placeholder="search by location in banglore" class="form-control">
+                            <input type="text" placeholder="search by location in banglore" name="location" value="{{Session::has('location')? Session::get('location') : Request::input('location')}}" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label for="">Hostel/Pg type</label>
-                            <select class="form-control">
-                                <option value="">Boys only</option>
-                                <option value="">Girls Only</option>
-                                <option value="">Boys/Girls</option>
-                                <option value="">Flat</option>
-
-                            </select>
-                        </div>
+                       
                         </form>
+                        
                     </div>
                     <div class="box_style_2">
                         <i class="icon_set_1_icon-90"></i>
