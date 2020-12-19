@@ -1,10 +1,16 @@
-@component('mail::message')
-# Introduction
+@component('mail::message', ['color' =>'success'])
+# New Booked:
+<p>A new hostel is booked check about this:</p>
 
-A new hostel booking is available
+@component('mail::table')
+|    Name       |   mobile      |  email     |
+| ------------- |:-------------:| ----------:|
+|    {{$name}}   | {{$mobile}}   | {{$email}} |
 
-@component('mail::button', ['url' => ''])
-Button Text
+@endcomponent
+
+@component('mail::button', ['url' => 'https://hostelconnect.in/room-details/'.{{$id}}, 'color' =>'success'])
+ Hostel Link
 @endcomponent
 
 Thanks,<br>

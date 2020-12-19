@@ -28,7 +28,8 @@ class CustomerHostelBookingMail extends Mailable
      */
     public function build()
     {
-        return $this->from('baseapp177@gmail.com', 'Mailtrap')
-        ->subject('Thank you for booking')->markdown('emails.customerhostelbooking');
+        return $this->from('hostelconnect177@gmail.com')
+        ->subject('Thank you for booking')->markdown('emails.customerhostelbooking')
+        ->with(['url' =>"https://hostelconnect.in"]);
     }
 }

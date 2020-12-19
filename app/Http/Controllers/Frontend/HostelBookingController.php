@@ -20,7 +20,11 @@ class HostelBookingController extends Controller
             'mobile' => 'required|min:10',
             'g-recaptcha-response' => 'required|captcha',
         ]);
-
+        $id = $request->get('hostel_id');
+        $name = $request->get('name');
+        $mobile = $request->get('mobile');
+        $email = $request->get('email');
+        
         $data = new HostelBooking();
         $data->name = $request->get('name');
         $data->email = $request->get('email');
@@ -32,7 +36,7 @@ class HostelBookingController extends Controller
         if($data->save()== true) {
 
             Mail::to($request->get('email'))->send(new CustomerHostelBookingMail());
-            Mail::to('baseapp177@gmail.com')->send(new hostelbookingNotification());
+            Mail::to('hostelconnect177@gmail.com')->send(new hostelbookingNotification($name, $mobile, $email, $id));
            
             return Redirect::back()->with('success', 'Booking completed Successfully, we will contact you shortly');
 

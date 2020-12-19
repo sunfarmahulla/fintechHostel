@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use App\Models\HostelBooking;
 
 class hostelbookingNotification extends Mailable
 {
@@ -16,9 +17,17 @@ class hostelbookingNotification extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public $name;
+    public $mobile;
+    public $email;
+    public $id;
+
+    public function __construct($name, $mobile, $email, $id)
     {
-        //
+        $this->name = $name;
+        $this->mobile = $mobile;
+        $this->email = $email; 
+        $this->id = $id;
     }
 
     /**
@@ -28,7 +37,8 @@ class hostelbookingNotification extends Mailable
      */
     public function build()
     {
-        return $this->from('baseapp177@gmail.com', 'Mailtrap')
-        ->subject('New Hostel Booking Notification')->markdown('emails.hostelbookingnotification');
+        return $this->from('hostelconnect177@gmail.com')
+        ->subject('New Hostel Booking Notification')->markdown('emails.hostelbookingnotification')
+        ->with(['url'=>"https://hostelconnect.in/room-details/".$this->id]);
     }
 }
