@@ -1,11 +1,41 @@
 @extends('layouts.frontend.app')
 
 @section('content')
+<style>
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
 
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  font-family:Khula;
+  font-size:2em;
+  text-align:center;
+  height:200px;
+  width:600px;
+  display:block;
+  position:absolute;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+</style>
 <!-- SubHeader =============================================== -->
-<div class="parallax-window" id="booking" data-parallax="scroll" data-image-src="frontend/img/sub_header_home.jpg" data-natural-width="1400" data-natural-height="550">
+<div class="parallax-window" id="booking" data-parallax="scroll" data-image-src="frontend/img/banner.jpeg" data-natural-width="1400" data-natural-height="550">
     <div id="subheader_home">
         <div id="sub_content">
+        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div></br>
+        <!-- <div><h2 style="color:#000;">Welcome to</br> hostel connect</h2></div> -->
             <div id="book_container">
                 <form method="post" action="/room-list" id="check_avail_home" autocomplete="off">
                     @csrf
@@ -129,5 +159,57 @@
         </div><!-- End promo_full_wp -->
     </div><!-- End promo_full -->
     </section><!-- End section -->    
+<script>
+// function([string1, string2],target id,[color1,color2])    
+consoleText(['Welcome To Hostel Connect'], 'text',['tomato','rebeccapurple']);
 
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+</script>
 @endsection

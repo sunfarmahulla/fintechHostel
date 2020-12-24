@@ -1,8 +1,4 @@
-@if (request()->is('/'))
 <header style="background: transparent;">
-@else
-<header>
-@endif
     <div class="container">
         <div class="row">
             <div class="col--md-3 col-sm-3 col-xs-3">
@@ -30,7 +26,7 @@
                        
                     </ul>
                     </li>
-                    <li><a href="https://anmolsahajwani12.typeform.com/to/GZBMIX1O" rel="noopener noreferrer" target="_blank">Affiliate Program</a></li>
+                    <li><a href="#">Flats</a></li>
                 </ul>
             </div><!-- End main-menu -->
             
