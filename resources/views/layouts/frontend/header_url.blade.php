@@ -1,5 +1,5 @@
 @if (request()->is('/'))
-<header style="background: transparent;">
+<header style="">
 @else
 <header>
 @endif

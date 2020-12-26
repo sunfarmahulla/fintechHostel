@@ -2,40 +2,12 @@
 
 @section('content')
 <style>
-@import url(https://fonts.googleapis.com/css?family=Khula:700);
-
-.hidden {
-  opacity:0;
-}
-.console-container {
- 
-  font-family:Khula;
-  font-size:2em;
-  text-align:center;
-  height:200px;
-  width:600px;
-  display:block;
-  position:absolute;
-  color:white;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  margin:auto;
-}
-.console-underscore {
-   display:inline-block;
-  position:relative;
-  top:-0.14em;
-  left:10px;
-}
+.parallax-window #subheader_home #sub_content h1 { font-weight: 300; color:skyblue; font-size: 38px; margin: 0px 0px 0px 0px; line-height: 120%; font-family: 'Open sans', sans-serif; }
 </style>
 <!-- SubHeader =============================================== -->
 <div class="parallax-window" id="booking" data-parallax="scroll" data-image-src="frontend/img/banner.jpeg" data-natural-width="1400" data-natural-height="550">
     <div id="subheader_home">
         <div id="sub_content">
-        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div></br>
-        <!-- <div><h2 style="color:#000;">Welcome to</br> hostel connect</h2></div> -->
             <div id="book_container">
                 <form method="post" action="/room-list" id="check_avail_home" autocomplete="off">
                     @csrf
@@ -59,157 +31,71 @@
 </div><!-- End parallax-window -->
         
 <div class="container margin_60">
-      <h2 class="main_title"><em></em>Why We Us <span>Hotel and Bed&amp;Breakfast</span></h2>
-        <p class="lead styled">
+      <h2 class="main_title"><em></em>Why Hostel Connect <span>Hotels and Flats</span></h2>
+        <!-- <p class="lead styled">
             Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit assueverit vix, falli aliquam complectitur ex ius.
-        </p>
+        </p> -->
 
         <div class="row about">
                 <div class="col-md-5 col-sm-6 col-md-offset-1">
-                   <h3>A beatiful contest</h3>
-                        <p>
-                            Esse dicit accusam duo an. Modus simul ei nec. Sea et explicari pertinacia, <strong>cu vitae bonorum</strong> vocibus nec, corpora signiferumque no vim. Ad principes scriptorem duo, te omnium gubergren eam, et eam ancillae appareat dissentiet. Quando tantas animal vis ut, mandamus voluptatum duo ne, ne odio vidit commodo has.
+                        <p style="padding:20px;">
+                            <h1 style="font-size:3vw;">EXPLORE BEST</h1><h1 style="font-size:3vw;">OF STAYS</h1>
                         </p>
                 </div>
                 <div class="col-md-4 col-sm-6 col-md-offset-1">
-                <img src="frontend/img/about_1.jpg" alt="" class="img-responsive styled"> 
+                <img src="frontend/img/about6.jpg" alt="" class="img-responsive styled"> 
                 </div>
-      </div><!-- End row -->
+        </div><!-- End row -->
         <div class="divider hidden-xs"></div>
        <div class="row about" >
             <div class="col-md-5 col-sm-6 col-md-offset-1 col-md-push-5">
-                 <h3>Charming rooms</h3>
+                 <!-- <h3>Charming rooms</h3>
                         <p>
                             Esse dicit accusam duo an. Modus simul ei nec. Sea et explicari pertinacia, <strong>cu vitae bonorum</strong> vocibus nec, corpora signiferumque no vim. Ad principes scriptorem duo, te omnium gubergren eam, et eam ancillae appareat dissentiet. Quando tantas animal vis ut, mandamus voluptatum duo ne, ne odio vidit commodo has.
+                        </p> -->
+                        <p style="padding:0px;">
+                            <h1 style="font-size:3vw;">KNOW YOUR<h1 style="font-size:3vw;"> SECOND HOME</h1></h1><h1 style="font-size:3vw;">INSIDE OUT</h1> <h1 style="font-size:3vw;">BEFORE MOVING IN</h1>
                         </p>
             </div>
             <div class="col-md-4 col-sm-6 col-md-offset-1 col-md-pull-6">
-               <img src="frontend/img/about_2.jpg" alt="" class="img-responsive styled"> 
+               <img src="frontend/img/about4.jpg" alt="" class="img-responsive styled"> 
             </div>
         </div><!-- End row -->
       <div class="divider hidden-xs"></div>
         <div class="row about">
                 <div class="col-md-5 col-sm-6 col-md-offset-1">
-                   <h3>Enjoy and relax</h3>
                         <p>
-                            Esse dicit accusam duo an. Modus simul ei nec. Sea et explicari pertinacia, <strong>cu vitae bonorum</strong> vocibus nec.
+                        <h1 style="font-size:3vw;">HASSLE FREE BOOKING</h1><h1 style="font-size:3vw;">WITHOUT ANY</h1><h1 style="font-size:3vw;">COMMISSION OR</h1><h1 style="font-size:3vw;">CONVINIENCE FEES.</h1>
                         </p>
-                        <ul class="list_ok">
+                        <!-- <ul class="list_ok">
                             <li>Spa and Sauna</li>
                             <li>Body treatments</li>
                              <li>Swimming pool</li>
-                        </ul>
+                        </ul> -->
                 </div>
                 <div class="col-md-4 col-sm-6 col-md-offset-1">
-                <img src="img/about_3.jpg" alt="" class="img-responsive styled"> 
+                <img src="frontend/img/about5.jpeg" alt="" class="img-responsive styled"> 
                 </div>
       </div><!-- End row -->
     </div><!-- End container -->
-
-        
-    <section class="promo_full">
-    <div class="promo_full_wp">
-        <div>
-            <h3>What Clients say<span>Id tale utinam ius, an mei omnium recusabo iracundia.</span></h3>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="carousel_testimonials">
-                        
-                            <div>
-                                <div class="box_overlay">
-                                    <div class="pic">
-                                        <figure><img src="frontend/img/testimonial_1.jpg" alt="" class="img-circle"></figure>
-                                        <h4>Roberta<small>12 October 2015</small></h4>
-                                    </div>
-                                    <div class="comment">
-                                        "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud. No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
-                                    </div>
-                                </div><!-- End box_overlay -->
-                            </div>
-                            
-                            <div>
-                                <div class="box_overlay">
-                                    <div class="pic">
-                                        <figure><img src="frontend/img/testimonial_1.jpg" alt="" class="img-circle"></figure>
-                                        <h4>Roberta<small>12 October 2015</small></h4>
-                                    </div>
-                                    <div class="comment">
-                                        "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud. No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
-                                    </div>
-                                </div><!-- End box_overlay -->
-                            </div>
-                            
-                            <div>
-                                <div class="box_overlay">
-                                    <div class="pic">
-                                        <figure><img src="frontend/img/testimonial_1.jpg" alt="" class="img-circle"></figure>
-                                        <h4>Roberta<small>12 October 2015</small></h4>
-                                    </div>
-                                    <div class="comment">
-                                        "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud. No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
-                                    </div>
-                                </div><!-- End box_overlay -->
-                            </div>
-                            
-                        </div><!-- End carousel_testimonials -->
-                    </div><!-- End col-md-8 -->
-                </div><!-- End row -->
-            </div><!-- End container -->
-        </div><!-- End promo_full_wp -->
-    </div><!-- End promo_full -->
-    </section><!-- End section -->    
-<script>
-// function([string1, string2],target id,[color1,color2])    
-consoleText(['Welcome To Hostel Connect'], 'text',['tomato','rebeccapurple']);
-
-function consoleText(words, id, colors) {
-  if (colors === undefined) colors = ['#fff'];
-  var visible = true;
-  var con = document.getElementById('console');
-  var letterCount = 1;
-  var x = 1;
-  var waiting = false;
-  var target = document.getElementById(id)
-  target.setAttribute('style', 'color:' + colors[0])
-  window.setInterval(function() {
-
-    if (letterCount === 0 && waiting === false) {
-      waiting = true;
-      target.innerHTML = words[0].substring(0, letterCount)
-      window.setTimeout(function() {
-        var usedColor = colors.shift();
-        colors.push(usedColor);
-        var usedWord = words.shift();
-        words.push(usedWord);
-        x = 1;
-        target.setAttribute('style', 'color:' + colors[0])
-        letterCount += x;
-        waiting = false;
-      }, 1000)
-    } else if (letterCount === words[0].length + 1 && waiting === false) {
-      waiting = true;
-      window.setTimeout(function() {
-        x = -1;
-        letterCount += x;
-        waiting = false;
-      }, 1000)
-    } else if (waiting === false) {
-      target.innerHTML = words[0].substring(0, letterCount)
-      letterCount += x;
-    }
-  }, 120)
-  window.setInterval(function() {
-    if (visible === true) {
-      con.className = 'console-underscore hidden'
-      visible = false;
-
-    } else {
-      con.className = 'console-underscore'
-
-      visible = true;
-    }
-  }, 400)
-}
-</script>
+    <div class="divider hidden-xs"></div>
+        <div class="row about">
+                <div class="col-md-4 col-sm-6 col-md-offset-1">
+                    <img src="frontend/img/about2.png" alt="" class="img-responsive styled"> 
+                </div>
+                <div class="col-md-5 col-sm-6 col-md-offset-1">
+                        <p>
+                        <h1 style="font-size:3vw;">GET EXCITING</h1><h1 style="font-size:3vw;">REWARDS ON</h1><h1 style="font-size:3vw;">EVERY BOOKING.</h1>
+                        </p>
+                        <!-- <ul class="list_ok">
+                            <li>Spa and Sauna</li>
+                            <li>Body treatments</li>
+                             <li>Swimming pool</li>
+                        </ul> -->
+                </div>
+                
+      </div><!-- End row -->
+    </div><!-- End container -->
+</br></br>
+    
 @endsection
