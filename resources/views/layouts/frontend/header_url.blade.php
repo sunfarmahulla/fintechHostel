@@ -26,8 +26,8 @@
                     <a href="javascript:void(0);" class="show-submenu">Auth<i class="icon-down-open-mini"></i></a>
                     <ul>
                     	<li><a href="{{url('/login')}}">Login</a></li>
-                    	<li><a href="{{url('/register')}}">Register</a></li>
-                       
+                    	<li><a href="{{url('/register')}}">Subscribe</a></li>
+
                     </ul>
                     </li>
                     <li><a href="https://anmolsahajwani12.typeform.com/to/GZBMIX1O" rel="noopener noreferrer" target="_blank">Affiliate Program</a></li>

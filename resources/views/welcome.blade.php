@@ -31,7 +31,7 @@
 </div><!-- End parallax-window -->
         
 <div class="container margin_60">
-      <h2 class="main_title"><em></em>Why Hostel Connect <span>Hotels and Flats</span></h2>
+      <h2 class="main_title"><em></em>Why Hostel Connect?<span>Hotels and Flats</span></h2>
         <!-- <p class="lead styled">
             Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos. Unum etiam cum te, an elit assueverit vix, falli aliquam complectitur ex ius.
         </p> -->

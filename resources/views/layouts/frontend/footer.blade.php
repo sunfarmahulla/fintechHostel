@@ -13,8 +13,8 @@
                <div class="col-md-6 col-sm-12">
                    <h3>About</h3>
                    <ul>
-                       <li><a href="#">About us</a></li>
-                       <li><a href="#">Explore</a></li>
+                       <li><a href="/home">About us</a></li>
+                       <li><a href="/">Explore</a></li>
                     </ul>
                </div>                
                <div class="col-md-3 col-sm-4">
@@ -26,6 +26,8 @@
                    </ul> -->
                </div>
                <div class="col-md-3 col-sm-4"  id="newsletter">
+               <a href="{{url('/register')}}" class="btn btn_1 white" id="submit-newsletter_2">Subscribe</a>
+
                    <!-- <h3>Newsletter</h3>
                    <p>Join our newsletter to keep be informed about offers and news.</p>
                    <div id="message-newsletter_2"></div>

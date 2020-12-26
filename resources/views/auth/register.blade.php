@@ -79,13 +79,9 @@
                             <div class="wrap-signup-form-btn">
                                 <div class="signup-form-bgbtn"></div>
                                 <button class="signup-form-button" type="submit">
-                                    <span>Signup</span>
+                                    <span>Subscribe</span>
                                 </button>
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                                
                             </div>
                         </div>
 

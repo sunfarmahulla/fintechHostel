@@ -46,16 +46,24 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="dropdown-inner">
+                                <!-- <div class="dropdown-inner">
                                     <ul class="link-list">
                                         <li><a href="html/user-profile-regular.html"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
                                         <li><a href="html/user-profile-setting.html"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
                                         <li><a href="html/user-profile-activity.html"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
+                              
                                 <div class="dropdown-inner">
                                     <ul class="link-list">
-                                        <li><a href="#"><em class="icon ni ni-signout"></em><span>Sign out</span></a></li>
+                                        <li>
+                                        <a href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><em class="icon ni ni-signout"></em><span>Sign out</span></a>
+                                                     
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>          
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -64,7 +72,7 @@
                             <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-toggle="dropdown">
                                 <div class="icon-status icon-status-info"><em class="icon ni ni-bell"></em></div>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right dropdown-menu-s1">
+                            <!-- <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right dropdown-menu-s1">
                                 <div class="dropdown-head">
                                     <span class="sub-title nk-dropdown-title">Notifications</span>
                                     <a href="#">Mark All as Read</a>
@@ -125,12 +133,12 @@
                                                 <div class="nk-notification-time">2 hrs ago</div>
                                             </div>
                                         </div>
-                                    </div><!-- .nk-notification -->
-                                </div><!-- .nk-dropdown-body -->
+                                    </div>.nk-notification -->
+                                <!-- </div>
                                 <div class="dropdown-foot center">
                                     <a href="#">View All</a>
                                 </div>
-                            </div>
+                            </div> -->
                         </li><!-- .dropdown -->
                     </ul><!-- .nk-quick-nav -->
                 </div><!-- .nk-header-tools -->
