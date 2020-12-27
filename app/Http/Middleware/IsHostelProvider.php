@@ -17,13 +17,11 @@ class IsHostelProvider
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user()->role === 'hostelrp') {
+        if(Auth::user()->role == 'hostelrp') {
+            return redirect('home');
+        }else{
             
             return $next($request);
-        
-        }else{
-            Auth::logout();
-            return redirect()->to('/login')->with('warning', 'You are not authorized to access this page');
         }
     }
 }

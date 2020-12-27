@@ -84,7 +84,7 @@
                     <div class="col-lg-7">
                         <div class="form-group">
                             <div class="form-control-wrap">
-                                <textarea class="form-control" name="clg_address_2" value=""  placeholder="college Address 2" required>{{old('clg_address_2')}}</textarea>
+                                <textarea class="form-control" name="clg_address_2" value=""  placeholder="college Address 2" >{{old('clg_address_2')}}</textarea>
                             </div>
                         </div>
                     </div>

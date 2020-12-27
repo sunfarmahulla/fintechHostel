@@ -59,6 +59,13 @@ Route::group(['prefix' => 'htl', 'middleware' => 'hostelProvider', 'middleware' 
 	Route::post('hp/complete-registartion-price/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'priceUpload' ] );
 
 	Route::put('hp/complete-registartion-price-edit/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'priceEdit' ] );
+	
+	Route::get('hp/complete-registartion-hc-near-by-collage/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'hcNearByCollageIndex']);
+	
+	Route::post('hp/complete-registartion-hc-near-by-collage/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'hcNearByCollageStore']);
+	
+	Route::get('hp/complete-registartion-hc-near-by-collage-trash/{id}',[App\Http\Controllers\HostelProvider\HostelRegistrationController::class, 'hcNearByCollageTrash']);
+
 });
 
 Route::group(['prefix' => 'ad', 'middleware' => 'admin', 'middleware' => 'auth'], function(){

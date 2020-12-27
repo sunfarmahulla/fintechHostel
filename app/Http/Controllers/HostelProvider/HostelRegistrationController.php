@@ -10,6 +10,8 @@ use Auth;
 use App\Models\HostelImageSetting;
 use App\Models\HostelFacilityManager;
 use App\Models\HostelPriceManager;
+use App\Models\NearByCollege;
+use App\Models\ClgRegistration;
 
 class HostelRegistrationController extends Controller
 {
@@ -126,5 +128,43 @@ class HostelRegistrationController extends Controller
     	}
 
 
-    }
+	}
+	
+
+	public function hcNearByCollageIndex($id){ 
+
+		$collegeList = ClgRegistration::all();
+		$college = NearByCollege::with('clgRegister')->where('hostel_connect_id', $id)->get();
+  
+		return view('hostelProvider.hostelRegistration.nearByCollege', ['id' => $id, 'collegeList' => $collegeList, 'college' => $college]);
+		  
+  
+	  }
+  
+	  public function hcNearByCollageStore(Request $request, $id) {
+  
+		$data = new NearByCollege();
+		$data->hostel_connect_id = $id;
+		$data->college_id = $request->get('college');
+		$data->distance = $request->get('distance');
+		
+		if($data->save() == true) {
+			  return Redirect::back()->with('success', 'successfully data saved');
+		  }else{
+			   return Redirect::back()->with('danger', 'Failed process');
+		  }
+  
+	  }
+	  
+	  public function hcNearByCollageTrash(Request $request, $id) {
+		
+		$data = NearByCollege::where('id', $id)->delete();
+  
+		  if($data == true) {
+			  return Redirect::back()->with('success', 'successfully image deleted');
+		  }else{
+			   return Redirect::back()->with('danger', 'Failed process');
+		  }
+	  }
+
 }

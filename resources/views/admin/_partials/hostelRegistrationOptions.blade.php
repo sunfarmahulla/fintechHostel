@@ -13,11 +13,11 @@
     
     <div class="card-inner p-0">
         <ul class="link-list-menu">
-            <li><a class="active" href="{{url('ad/htl/complete-registartion/'.$data->id)}}"><em class="icon ni ni-user-fill-c"></em><span>Hostel Infomation</span></a></li>
-            <li><a href="{{url('ad/htl/complete-registartion-image/'.$data->id)}}"><em class="icon ni ni-bell-fill"></em><span>Image Manager</span></a></li>
-            <li><a href="{{url('ad/htl/complete-registartion-facility/'.$data->id)}}"><em class="icon ni ni-activity-round-fill"></em><span>Facility Manager</span></a></li>
-            <li><a href="{{url('ad/htl/complete-registartion-price/'.$data->id)}}"><em class="icon ni ni-lock-alt-fill"></em><span>Price settings</span></a></li>
-           <li><a href="{{url('ad/htl/complete-registartion-hc-near-by-collage/'.$data->id)}}"><em class="icon ni ni-lock-alt-fill"></em><span>Near by Collage settings</span></a></li>
+            <li><a class="active" href="{{url('ad/htl/complete-registartion/'.$data->id)}}"><em class="icon ni ni-info-fill"></em><span>Hostel Infomation</span></a></li>
+            <li><a href="{{url('ad/htl/complete-registartion-image/'.$data->id)}}"><em class="icon ni ni-file-img"></em><span>Image Manager</span></a></li>
+            <li><a href="{{url('ad/htl/complete-registartion-facility/'.$data->id)}}"><em class="icon ni ni-building"></em><span>Facility Manager</span></a></li>
+            <li><a href="{{url('ad/htl/complete-registartion-price/'.$data->id)}}"><em class="icon ni ni-sign-inr"></em><span>Price settings</span></a></li>
+            <li><a href="{{url('ad/htl/complete-registartion-hc-near-by-collage/'.$data->id)}}"><em class="icon ni ni-building"></em><span>Near by Collage settings</span></a></li>
         </ul>
     </div><!-- .card-inner -->
 </div><!-- .card-inner-group -->

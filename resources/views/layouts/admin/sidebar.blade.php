@@ -15,8 +15,14 @@
             <div class="nk-sidebar-menu" data-simplebar>
                 <ul class="nk-menu">
                     <li class="nk-menu-item">
+                        <a href="{{url('/')}}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-home-alt"></em></span>
+                            <span class="nk-menu-text">Welcome Home</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
                         <a href="{{url('/home')}}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-home"></em></span>
                             <span class="nk-menu-text">Home</span>
                         </a>
                     </li><!-- .nk-menu-item -->
@@ -31,7 +37,7 @@
                     </li><!-- .nk-menu-heading -->
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-account-setting"></em></span>
                             <span class="nk-menu-text">User Manage</span>
                         </a>
                         <ul class="nk-menu-sub">
@@ -46,7 +52,7 @@
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-file-docs"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-account-setting"></em></span>
                             <span class="nk-menu-text">Employee Management</span>
                         </a>
                         <ul class="nk-menu-sub">
@@ -60,7 +66,7 @@
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-file-docs"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-building-fill"></em></span>
                             <span class="nk-menu-text">College Registration</span>
                         </a>
                         <ul class="nk-menu-sub">
@@ -74,7 +80,7 @@
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-tranx"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-home-fill"></em></span>
                             <span class="nk-menu-text">Hostel Action</span>
                         </a>
                         <ul class="nk-menu-sub">
